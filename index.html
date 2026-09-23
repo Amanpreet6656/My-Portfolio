@@ -1,535 +1,253 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-       
-    <meta charset="UTF-8" />
-
-       
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-       
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amanpreet Singh | Full Stack Dev</title>
-
-           
+    
     <script src="https://cdn.tailwindcss.com"></script>
-
-       
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-           
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    
     <style>
-
-              body, html {
-
-                  margin: 0; padding: 0;
-
-                  background-color: #050505; color: #fff;
-
-                  font-family: 'Inter', sans-serif;
-
-                  overflow-x: hidden; height: 600vh;
-
-              }
-
-              ::-webkit-scrollbar { display: none; }
-
-
-              #scroll-progress {
-
-                  position: fixed; top: 0; left: 0; height: 3px;
-
-                  background: linear-gradient(90deg, #3b82f6, #06b6d4);
-
-                  z-index: 1000; width: 0%;
-
-              }
-
-
-              #scene-container {
-
-                  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-
-                  perspective: 1200px; overflow: hidden; pointer-events: none;
-
-              }
-
-
-              .scene-section {
-
-                  position: absolute; top: 50%; left: 50%;
-
-                  width: 90vw; max-width: 1000px; transform: translate(-50%, -50%);
-
-                  pointer-events: auto; will-change: transform, opacity;
-
-              }
-
-
-              .glass-card {
-
-                  background: rgba(20, 20, 20, 0.4);
-
-                  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-
-                  border: 1px solid rgba(255, 255, 255, 0.05);
-
-                  border-radius: 1.5rem;
-
-                  transition: all 0.3s ease;
-
-              }
-
-              .glass-card:hover {
-
-                  border-color: rgba(59, 130, 246, 0.3);
-
-                  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.15);
-
-              }
-
-
-              .massive-text {
-
-                  font-family: 'Oswald', sans-serif; line-height: 1;
-
-                  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-
-              }
-
-
-              .cursor::after {
-
-                  content: '|'; animation: blink 0.8s infinite; color: #3b82f6;
-
-              }
-
-              @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
-
-              /* 3D Dial Navigation */
-
-              .dial-nav {
-
-                  position: fixed; right: 2.5rem; top: 50%; transform: translateY(-50%);
-
-                  perspective: 800px; transform-style: preserve-3d;
-
-                  height: 250px; width: 120px; z-index: 50; pointer-events: none;
-
-              }
-
-              .dial-item {
-
-                  position: absolute; top: 50%; right: 0; margin-top: -12px;
-
-                  font-family: 'Oswald', sans-serif; font-size: 1.1rem; letter-spacing: 2px;
-
-                  color: rgba(255, 255, 255, 0.2); text-align: right;
-
-                  text-transform: uppercase; cursor: pointer; pointer-events: auto;
-
-                  /* Pushes the rotation axis backward to create a physical cylinder effect */
-
-                  transform-origin: right center -120px;
-
-                  will-change: transform, opacity, color, text-shadow;
-
-                  transition: color 0.2s;
-
-              }
-
-              .dial-item:hover { color: #60a5fa; }
-
-         
-    </style>
-  </head>
-
-  <body class="antialiased selection:bg-blue-500/30">
-       
-    <div id="scroll-progress"></div>
-
-           
-    <!-- Unique 3D Wheel Navigation -->
-
-       
-    <div class="dial-nav">
-             
-      <div class="dial-item" data-index="0">00. Intro</div>
-
-             
-      <div class="dial-item" data-index="1">01. Reps</div>
-
-             
-      <div class="dial-item" data-index="2">02. Work</div>
-
-             
-      <div class="dial-item" data-index="3">03. Stack</div>
-
-             
-      <div class="dial-item" data-index="4">04. Ping</div>
-
-         
-    </div>
-
-       
-    <div class="fixed top-8 left-8 z-50 pointer-events-none">
-             
-      <p class="text-gray-500 tracking-widest text-xs uppercase">
-        Amanpreet Singh
-      </p>
-
-         
-    </div>
-
-       
-    <div id="scene-container">
-                     
-      <!-- 0: Hero -->
-
-             
-      <div class="scene-section">
-                   
-        <div class="w-full text-center">
-                         
-          <p class="text-blue-500 tracking-[0.3em] text-sm uppercase mb-4">
-            Based near Sirsa
-          </p>
-
-                         
-          <h1
-            class="massive-text text-[12vw] md:text-[8vw] font-bold text-white mb-6"
-          >
-                                <span id="typed-text" class="cursor"></span>
-
-                           
-          </h1>
-
-                         
-          <p class="text-gray-400 text-lg md:text-xl font-light">
-            Building web apps that actually work. Scroll down.
-          </p>
-
-                     
-        </div>
-
-               
-      </div>
-
-             
-      <!-- 1: About -->
-
-             
-      <div class="scene-section">
-                   
-        <div
-          class="glass-card p-8 md:p-14 flex flex-col md:flex-row gap-8 items-center"
-        >
-                         
-          <div class="flex-1 space-y-5">
-                               
-            <h2 class="text-3xl md:text-4xl font-bold text-white">
-              Background
-            </h2>
-
-                               
-            <div class="h-1 w-12 bg-blue-500 rounded-full mb-4"></div>
-
-                               
-            <p class="text-gray-300 text-lg leading-relaxed font-light">
-                                      I’m 18 and currently training to be a
-              full-stack dev. I treat writing code exactly how I handle my
-              Taekwondo and boxing practice—no shortcuts, just putting in the
-              reps and getting the basics right.                    
-            </p>
-
-                               
-            <p class="text-gray-300 text-lg leading-relaxed font-light">
-                                      Right now, my main focus is sharpening my
-              tech stack and studying Japanese. The long-term goal is to move to
-              Japan, study Computer Science, and get heavily involved in AI and
-              Machine Learning.                    
-            </p>
-
-                           
-          </div>
-
-                     
-        </div>
-
-               
-      </div>
-
-             
-      <!-- 2: Experience -->
-
-             
-      <div class="scene-section">
-                   
-        <div class="glass-card p-8 md:p-14">
-                         
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-            Client Work
-          </h2>
-
-                         
-          <div class="grid md:grid-cols-2 gap-10">
-                               
-            <div>
-                                     
-              <h3 class="text-2xl font-semibold text-blue-400 mb-4">
-                Kissa Punjab
-              </h3>
-
-                                     
-              <p class="text-sm text-gray-400 mb-1">Built for Gurpreet Sidhu</p>
-
-                                     
-              <p class="text-gray-300 font-light mb-4">
-                A custom web platform designed to sell e-books and host
-                historical content.
-              </p>
-
-                                 
-            </div>
-
-                               
-            <div class="space-y-4 text-gray-300 font-light">
-                                     
-              <p>
-                                            Writing the code to sell books
-                online was the easy part. The actual headache was learning how
-                project management works in the real world.                    
-                   
-              </p>
-
-                                     
-              <p>
-                                            I had to learn how to deal with
-                <strong>scope creep</strong> firsthand. It taught me how to
-                anchor client expectations, lock down a timeline, and ensure the
-                core product actually launched without getting buried in endless
-                feature requests.                        
-              </p>
-
-                                 
-            </div>
-
-                           
-          </div>
-
-                     
-        </div>
-
-               
-      </div>
-
-             
-      <!-- 3: Stack -->
-
-             
-      <div class="scene-section">
-                   
-        <div class="glass-card p-8 md:p-14 text-center">
-                         
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-10">
-            Tech Stack
-          </h2>
-
-                         
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              HTML & CSS
-            </div>
-
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              JavaScript
-            </div>
-
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              Python
-            </div>
-
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              SQL
-            </div>
-
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              Java
-            </div>
-
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              PHP
-            </div>
-
-                               
-            <div
-              class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default"
-            >
-              Bootstrap
-            </div>
-
-                           
-          </div>
-
-                     
-        </div>
-
-               
-      </div>
-
-             
-      <!-- 4: Contact -->
-
-             
-      <div class="scene-section">
-                   
-        <div class="glass-card p-10 md:p-16 text-center">
-                         
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-            Let's talk.
-          </h2>
-
-                         
-          <p class="text-gray-400 text-lg mb-8 max-w-lg mx-auto font-light">
-                                Need a custom website, want to talk code, or
-            just geeking out over AI? Hit me up.                
-          </p>
-
-                         
-          <a
-            href="mailto:amanpreet6656@gmail.com"
-            class="inline-block px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50"
-          >
-                                Let's Have a chat                
-          </a>
-
-                     
-        </div>
-
-               
-      </div>
-
-         
-    </div>
-
-       
-    <script>
-      // Typing Effect
-
-      const txt = "FULL STACK DEV";
-
-      let i = 0;
-
-      (function type() {
-        if (i < txt.length) {
-          document.getElementById("typed-text").textContent += txt.charAt(i);
-
-          i++;
-          setTimeout(type, 50);
+        body, html {
+            margin: 0; padding: 0;
+            background-color: #050505; color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; height: 600vh; 
         }
-      })(); // Engine Variables
+        ::-webkit-scrollbar { display: none; }
 
-      const sections = document.querySelectorAll(".scene-section");
+        #scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            z-index: 1000; width: 0%;
+        }
 
-      const dialItems = document.querySelectorAll(".dial-item");
+        #scene-container {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            perspective: 1200px; overflow: hidden; pointer-events: none;
+        }
 
-      let target = 0,
-        current = 0;
+        .scene-section {
+            position: absolute; top: 50%; left: 50%;
+            width: 90vw; max-width: 1000px; transform: translate(-50%, -50%);
+            pointer-events: auto; will-change: transform, opacity;
+        }
 
-      const isMobile = window.innerWidth < 768; // Scroll Tracking
+        .glass-card {
+            background: rgba(20, 20, 20, 0.4);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.15);
+        }
 
-      window.addEventListener("scroll", () => {
-        const max = document.documentElement.scrollHeight - window.innerHeight;
+        .massive-text {
+            font-family: 'Oswald', sans-serif; line-height: 1;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
 
-        const frac = max > 0 ? window.scrollY / max : 0;
+        .cursor::after {
+            content: '|'; animation: blink 0.8s infinite; color: #3b82f6;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-        target = frac * (sections.length - 1);
+        /* 3D Dial Navigation */
+        .dial-nav {
+            position: fixed; right: 2.5rem; top: 50%; transform: translateY(-50%);
+            perspective: 800px; transform-style: preserve-3d;
+            height: 250px; width: 120px; z-index: 50; pointer-events: none;
+        }
+        .dial-item {
+            position: absolute; top: 50%; right: 0; margin-top: -12px;
+            font-family: 'Oswald', sans-serif; font-size: 1.1rem; letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.2); text-align: right;
+            text-transform: uppercase; cursor: pointer; pointer-events: auto;
+            /* Pushes the rotation axis backward to create a physical cylinder effect */
+            transform-origin: right center -120px; 
+            will-change: transform, opacity, color, text-shadow;
+            transition: color 0.2s;
+        }
+        .dial-item:hover { color: #60a5fa; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500/30">
 
-        document.getElementById("scroll-progress").style.width =
-          frac * 100 + "%";
-      }); // Click on Dial Items to Navigate
+    <div id="scroll-progress"></div>
+    
+    <!-- Unique 3D Wheel Navigation -->
+    <div class="dial-nav">
+        <div class="dial-item" data-index="0">00. Intro</div>
+        <div class="dial-item" data-index="1">01. Reps</div>
+        <div class="dial-item" data-index="2">02. Work</div>
+        <div class="dial-item" data-index="3">03. Stack</div>
+        <div class="dial-item" data-index="4">04. Ping</div>
+    </div>
 
-      dialItems.forEach((item) =>
-        item.addEventListener("click", (e) => {
-          const max =
-            document.documentElement.scrollHeight - window.innerHeight;
+    <div class="fixed top-8 left-8 z-50 pointer-events-none">
+        <p class="text-gray-500 tracking-widest text-xs uppercase">Amanpreet Singh</p>
+    </div>
 
-          window.scrollTo({
-            top: (e.currentTarget.dataset.index / 4) * max,
-            behavior: "smooth",
-          });
-        }),
-      ); // Animation Loop
+    <div id="scene-container">
+        
+        <!-- 0: Hero -->
+        <div class="scene-section">
+            <div class="w-full text-center">
+                <p class="text-blue-500 tracking-[0.3em] text-sm uppercase mb-4">Based near Sirsa</p>
+                <h1 class="massive-text text-[12vw] md:text-[8vw] font-bold text-white mb-6">
+                    <span id="typed-text" class="cursor"></span>
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl font-light">Building web apps that actually work. Scroll down.</p>
+            </div>
+        </div>
 
-      function anim() {
-        current += (target - current) * 0.12; // Update 3D Dial Navigation
+        <!-- 1: About -->
+        <div class="scene-section">
+            <div class="glass-card p-8 md:p-14 flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1 space-y-5">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Background</h2>
+                    <div class="h-1 w-12 bg-blue-500 rounded-full mb-4"></div>
+                    <p class="text-gray-300 text-lg leading-relaxed font-light">
+                        I’m 18 and currently training to be a full-stack dev. I treat writing code exactly how I handle my Taekwondo and boxing practice—no shortcuts, just putting in the reps and getting the basics right.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed font-light">
+                        Right now, my main focus is sharpening my tech stack and studying Japanese. The long-term goal is to move to Japan, study Computer Science, and get heavily involved in AI and Machine Learning. 
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        dialItems.forEach((item, idx) => {
-          const rel = idx - current; // Calculate rotation on the X axis to create a wheel
+        <!-- 2: Experience -->
+        <div class="scene-section">
+            <div class="glass-card p-8 md:p-14">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Client Work</h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-4">Kissa Punjab</h3>
+                        <p class="text-sm text-gray-400 mb-1">Built for Gurpreet Sidhu</p>
+                        <p class="text-gray-300 font-light mb-4">A custom web platform designed to sell e-books and host historical content.</p>
+                    </div>
+                    <div class="space-y-4 text-gray-300 font-light">
+                        <p>
+                            Writing the code to sell books online was the easy part. The actual headache was learning how project management works in the real world.
+                        </p>
+                        <p>
+                            I had to learn how to deal with <strong>scope creep</strong> firsthand. It taught me how to anchor client expectations, lock down a timeline, and ensure the core product actually launched without getting buried in endless feature requests.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-          const rotateX = rel * 40;
+        <!-- 3: Stack -->
+        <div class="scene-section">
+            <div class="glass-card p-8 md:p-14 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-10">Tech Stack</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">HTML & CSS</div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">JavaScript</div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">Python</div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">SQL</div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">Java</div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">PHP</div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">Bootstrap</div>
+                </div>
+            </div>
+        </div>
 
-          const opacity = Math.max(0, 1 - Math.abs(rel) * 0.45);
+        <!-- 4: Contact -->
+        <div class="scene-section">
+            <div class="glass-card p-10 md:p-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Let's talk.</h2>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg mx-auto font-light">
+                    Need a custom website, want to talk code, or just geeking out over AI? Hit me up.
+                </p>
+                <a href="mailto:amanpreet6656@gmail.com" class="inline-block px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50">
+                    amanpreet6656@gmail.com
+                </a>
+            </div>
+        </div>
 
-          item.style.transform = `rotateX(${rotateX}deg)`;
+    </div>
 
-          item.style.opacity = opacity; // Highlight active item
+    <script>
+        // Typing Effect
+        const txt = "FULL STACK DEV";
+        let i = 0;
+        (function type() {
+            if (i < txt.length) {
+                document.getElementById('typed-text').textContent += txt.charAt(i);
+                i++; setTimeout(type, 50);
+            }
+        })();
 
-          if (Math.abs(rel) < 0.15) {
-            item.style.color = "#fff";
+        // Engine Variables
+        const sections = document.querySelectorAll('.scene-section');
+        const dialItems = document.querySelectorAll('.dial-item');
+        let target = 0, current = 0;
+        const isMobile = window.innerWidth < 768;
 
-            item.style.textShadow = "0 0 15px rgba(59, 130, 246, 0.8)";
-          } else {
-            item.style.color = "rgba(255,255,255,0.2)";
-
-            item.style.textShadow = "none";
-          }
-        }); // Section Transforms
-
-        sections.forEach((sec, idx) => {
-          const rel = idx - current;
-
-          const op = Math.max(0, 1 - Math.abs(rel));
-
-          if (isMobile) {
-            sec.style.transform = `translate(-50%, -50%) translateY(${rel * 100}vh) scale(${1 - Math.abs(rel) * 0.1})`;
-          } else {
-            sec.style.transform = `translate(-50%, -50%) translate3d(${rel * 50}vw, ${rel * 50}vh, ${rel * -1200}px) rotateX(${rel * 20}deg) rotateY(${rel * -20}deg)`;
-          }
-
-          sec.style.opacity = op;
-
-          sec.style.visibility = op < 0.05 ? "hidden" : "visible";
-
-          sec.style.pointerEvents = op < 0.05 ? "none" : "auto";
+        // Scroll Tracking
+        window.addEventListener('scroll', () => {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            const frac = max > 0 ? window.scrollY / max : 0;
+            target = frac * (sections.length - 1);
+            document.getElementById('scroll-progress').style.width = (frac * 100) + '%';
         });
 
-        requestAnimationFrame(anim);
-      }
+        // Click on Dial Items to Navigate
+        dialItems.forEach(item => item.addEventListener('click', e => {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            window.scrollTo({ top: (e.currentTarget.dataset.index / 4) * max, behavior: 'smooth' });
+        }));
 
-      anim();
+        // Animation Loop
+        function anim() {
+            current += (target - current) * 0.12;
+
+            // Update 3D Dial Navigation
+            dialItems.forEach((item, idx) => {
+                const rel = idx - current;
+                // Calculate rotation on the X axis to create a wheel
+                const rotateX = rel * 40; 
+                const opacity = Math.max(0, 1 - Math.abs(rel) * 0.45);
+                
+                item.style.transform = `rotateX(${rotateX}deg)`;
+                item.style.opacity = opacity;
+
+                // Highlight active item
+                if (Math.abs(rel) < 0.15) {
+                    item.style.color = '#fff';
+                    item.style.textShadow = '0 0 15px rgba(59, 130, 246, 0.8)';
+                } else {
+                    item.style.color = 'rgba(255,255,255,0.2)';
+                    item.style.textShadow = 'none';
+                }
+            });
+
+            // Section Transforms
+            sections.forEach((sec, idx) => {
+                const rel = idx - current;
+                const op = Math.max(0, 1 - Math.abs(rel));
+                
+                if (isMobile) {
+                    sec.style.transform = `translate(-50%, -50%) translateY(${rel * 100}vh) scale(${1 - Math.abs(rel)*0.1})`;
+                } else {
+                    sec.style.transform = `translate(-50%, -50%) translate3d(${rel * 50}vw, ${rel * 50}vh, ${rel * -1200}px) rotateX(${rel * 20}deg) rotateY(${rel * -20}deg)`;
+                }
+                
+                sec.style.opacity = op;
+                sec.style.visibility = op < 0.05 ? 'hidden' : 'visible';
+                sec.style.pointerEvents = op < 0.05 ? 'none' : 'auto';
+            });
+
+            requestAnimationFrame(anim);
+        }
+        anim();
     </script>
-  </body>
+</body>
 </html>
