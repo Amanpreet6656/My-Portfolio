@@ -79,13 +79,22 @@
 
     <div id="scroll-progress"></div>
     
-    <!-- Unique 3D Wheel Navigation -->
-    <div class="dial-nav">
+    <!-- Unique 3D Wheel Navigation (Desktop) -->
+    <div class="dial-nav hidden md:block">
         <div class="dial-item" data-index="0">00. Intro</div>
         <div class="dial-item" data-index="1">01. Reps</div>
         <div class="dial-item" data-index="2">02. Work</div>
         <div class="dial-item" data-index="3">03. Stack</div>
         <div class="dial-item" data-index="4">04. Ping</div>
+    </div>
+
+    <!-- Mobile Pagination Dots (Mobile Only) -->
+    <div id="mobile-dots" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-3.5 py-2 rounded-full bg-neutral-900/80 backdrop-blur-md border border-white/10 md:hidden pointer-events-auto shadow-lg shadow-black/50">
+        <button class="mobile-dot h-2 rounded-full transition-all duration-300 cursor-pointer" data-index="0" aria-label="00. Intro"></button>
+        <button class="mobile-dot h-2 rounded-full transition-all duration-300 cursor-pointer" data-index="1" aria-label="01. Reps"></button>
+        <button class="mobile-dot h-2 rounded-full transition-all duration-300 cursor-pointer" data-index="2" aria-label="02. Work"></button>
+        <button class="mobile-dot h-2 rounded-full transition-all duration-300 cursor-pointer" data-index="3" aria-label="03. Stack"></button>
+        <button class="mobile-dot h-2 rounded-full transition-all duration-300 cursor-pointer" data-index="4" aria-label="04. Ping"></button>
     </div>
 
     <div class="fixed top-8 left-8 z-50 pointer-events-none">
@@ -105,71 +114,172 @@
             </div>
         </div>
 
-        <!-- 1: About -->
+        <!-- 1: About (01. Reps) -->
         <div class="scene-section">
             <div class="glass-card p-8 md:p-14 flex flex-col md:flex-row gap-8 items-center">
                 <div class="flex-1 space-y-5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs uppercase tracking-widest text-blue-400 font-mono">01. Reps</span>
+                    </div>
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Background</h2>
                     <div class="h-1 w-12 bg-blue-500 rounded-full mb-4"></div>
                     <p class="text-gray-300 text-lg leading-relaxed font-light">
-                        I’m 18 and currently training to be a full-stack dev. I treat writing code exactly how I handle my Taekwondo and boxing practice—no shortcuts, just putting in the reps and getting the basics right.
+                        I am a full-stack developer. I treat writing code exactly how I handle my Taekwondo and boxing practice—no shortcuts, just putting in the reps and getting the fundamentals right.
                     </p>
                     <p class="text-gray-300 text-lg leading-relaxed font-light">
-                        Right now, my main focus is sharpening my tech stack and studying Japanese. The long-term goal is to move to Japan, study Computer Science, and get heavily involved in AI and Machine Learning. 
+                        Right now, my focus is building resilient web applications and studying Japanese. The long-term goal is to move to Japan, pursue Computer Science, and dive deep into AI and Machine Learning systems.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- 2: Experience -->
+        <!-- 2: Experience (02. Work) -->
         <div class="scene-section">
-            <div class="glass-card p-8 md:p-14">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Client Work</h2>
-                <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass-card p-6 md:p-10 max-h-[85vh] overflow-y-auto">
+                <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-2xl font-semibold text-blue-400 mb-4">Kissa Punjab</h3>
-                        <p class="text-sm text-gray-400 mb-1">Built for Gurpreet Sidhu</p>
-                        <p class="text-gray-300 font-light mb-4">A custom web platform designed to sell e-books and host historical content.</p>
+                        <span class="text-xs uppercase tracking-widest text-blue-400 font-mono">02. Work</span>
+                        <h2 class="text-2xl md:text-4xl font-bold text-white mt-1">Featured Projects</h2>
                     </div>
-                    <div class="space-y-4 text-gray-300 font-light">
-                        <p>
-                            Writing the code to sell books online was the easy part. The actual headache was learning how project management works in the real world.
-                        </p>
-                        <p>
-                            I had to learn how to deal with <strong>scope creep</strong> firsthand. It taught me how to anchor client expectations, lock down a timeline, and ensure the core product actually launched without getting buried in endless feature requests.
-                        </p>
+                    <span class="text-xs text-gray-400 font-mono border border-white/10 px-3 py-1 rounded-full hidden sm:inline-block">Production & Tools</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Project 1: Kissa Punjab -->
+                    <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/40 transition-all">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-blue-400">Kissa Punjab</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Client Platform &bull; Built for Gurpreet Sidhu</p>
+                                </div>
+                                <span class="text-[11px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-mono">Client</span>
+                            </div>
+                            
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">
+                                A custom web platform built to sell digital literature and host historical Punjabi writings.
+                            </p>
+
+                            <div class="space-y-2 pt-2 border-t border-white/5">
+                                <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider font-mono">Architecture & Delivery</h4>
+                                <p class="text-xs text-gray-300 font-light leading-relaxed">
+                                    Structured a normalized relational SQL schema managing users, orders, and digital entitlements. Instead of exposing raw asset URLs, I implemented a PHP delivery engine that verifies payment sessions, issues temporary signed tokens, and streams protected files to prevent unauthorized sharing.
+                                </p>
+                                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                                    Taught me real-world scope management: locking milestones, anchoring client expectations, and launching stable software on time.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-white/5">
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">PHP</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">SQL</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">JavaScript</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Smart Kanji Analyzer -->
+                    <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/40 transition-all">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-blue-400">Smart Kanji Analyzer</h3>
+                                    <p class="text-xs text-gray-400 mt-0.5">Personal Tool &bull; Japanese Study Utility</p>
+                                </div>
+                                <span class="text-[11px] px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 font-mono">Tool</span>
+                            </div>
+                            
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">
+                                A custom web tool I built to solve my own bottleneck while studying Japanese: stopping mid-reading to manually look up unknown kanji killed my study flow.
+                            </p>
+
+                            <div class="space-y-2 pt-2 border-t border-white/5">
+                                <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider font-mono">How It Works</h4>
+                                <p class="text-xs text-gray-300 font-light leading-relaxed">
+                                    Parses raw Japanese text directly in the browser, isolating individual characters and compound words. It maps each character against structured kanji datasets to display Onyomi/Kunyomi readings, radical breakdowns, meanings, and JLPT levels instantly without page reloads.
+                                </p>
+                                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                                    Zero dependencies, instant local parsing, and designed purely around efficient study workflow.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-white/5">
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">JavaScript</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">Regex Parsing</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">Tailwind</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5 font-mono">HTML5 API</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 3: Stack -->
+        <!-- 3: Stack (03. Stack) -->
+        <div class="scene-section">
+            <div class="glass-card p-6 md:p-12">
+                <div class="mb-8">
+                    <span class="text-xs uppercase tracking-widest text-blue-400 font-mono">03. Stack</span>
+                    <h2 class="text-2xl md:text-4xl font-bold text-white mt-1">Technical Stack</h2>
+                    <p class="text-gray-400 text-sm md:text-base font-light mt-2">Grouped by architectural layer—from responsive interfaces to backend business logic and databases.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Frontend -->
+                    <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-5">
+                            <h3 class="text-lg font-semibold text-white tracking-wide">Frontend</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-mono">Client-Side</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default text-sm font-medium">HTML</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default text-sm font-medium">CSS</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default text-sm font-medium">JavaScript</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default text-sm font-medium">Tailwind</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default text-sm font-medium">Bootstrap</div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & DB -->
+                    <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-5">
+                            <h3 class="text-lg font-semibold text-white tracking-wide">Backend & DB</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">Server & Data</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-emerald-500/10 hover:text-white hover:border-emerald-500/50 transition-all cursor-default text-sm font-medium">PHP</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-emerald-500/10 hover:text-white hover:border-emerald-500/50 transition-all cursor-default text-sm font-medium">SQL</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-emerald-500/10 hover:text-white hover:border-emerald-500/50 transition-all cursor-default text-sm font-medium">Python</div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-center text-gray-300 hover:bg-emerald-500/10 hover:text-white hover:border-emerald-500/50 transition-all cursor-default text-sm font-medium">Java</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4: Contact (04. Ping) -->
         <div class="scene-section">
             <div class="glass-card p-8 md:p-14 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-10">Tech Stack</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">HTML</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">CSS</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">JavaScript</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">Python</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">SQL</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">Java</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">PHP</div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 hover:bg-blue-500/10 hover:text-white hover:border-blue-500/50 transition-all cursor-default">Bootstrap</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4: Contact -->
-        <div class="scene-section">
-            <div class="glass-card p-10 md:p-16 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Let's talk.</h2>
-                <p class="text-gray-400 text-lg mb-8 max-w-lg mx-auto font-light">
+                <span class="text-xs uppercase tracking-widest text-blue-400 font-mono">04. Ping</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-1 mb-4">Let's talk.</h2>
+                <p class="text-gray-400 text-base md:text-lg mb-8 max-w-lg mx-auto font-light leading-relaxed">
                     Need a custom website, want to talk code, or just geeking out over AI? Hit me up.
                 </p>
-                <a href="mailto:amanpreet6656@gmail.com" class="inline-block px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50">
-                    amanpreet6656@gmail.com
-                </a>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:amanpreet6656@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/40 text-sm md:text-base">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>amanpreet6656@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/Amanpreet6656" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all text-sm md:text-base">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                        <span>GitHub Profile</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -189,8 +299,13 @@
         // Engine Variables
         const sections = document.querySelectorAll('.scene-section');
         const dialItems = document.querySelectorAll('.dial-item');
+        const mobileDots = document.querySelectorAll('.mobile-dot');
         let target = 0, current = 0;
-        const isMobile = window.innerWidth < 768;
+        let isMobile = window.innerWidth < 768;
+
+        window.addEventListener('resize', () => {
+            isMobile = window.innerWidth < 768;
+        });
 
         // Scroll Tracking
         window.addEventListener('scroll', () => {
@@ -200,33 +315,51 @@
             document.getElementById('scroll-progress').style.width = (frac * 100) + '%';
         });
 
-        // Click on Dial Items to Navigate
+        // Click on Dial Items to Navigate (Desktop)
         dialItems.forEach(item => item.addEventListener('click', e => {
             const max = document.documentElement.scrollHeight - window.innerHeight;
-            window.scrollTo({ top: (e.currentTarget.dataset.index / 4) * max, behavior: 'smooth' });
+            window.scrollTo({ top: (parseFloat(e.currentTarget.dataset.index) / (sections.length - 1)) * max, behavior: 'smooth' });
+        }));
+
+        // Click on Mobile Dots to Navigate (Mobile)
+        mobileDots.forEach(dot => dot.addEventListener('click', e => {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            window.scrollTo({ top: (parseFloat(e.currentTarget.dataset.index) / (sections.length - 1)) * max, behavior: 'smooth' });
         }));
 
         // Animation Loop
         function anim() {
             current += (target - current) * 0.12;
 
-            // Update 3D Dial Navigation
+            // Update 3D Dial Navigation (Desktop)
             dialItems.forEach((item, idx) => {
                 const rel = idx - current;
-                // Calculate rotation on the X axis to create a wheel
                 const rotateX = rel * 40; 
                 const opacity = Math.max(0, 1 - Math.abs(rel) * 0.45);
                 
                 item.style.transform = `rotateX(${rotateX}deg)`;
                 item.style.opacity = opacity;
 
-                // Highlight active item
                 if (Math.abs(rel) < 0.15) {
                     item.style.color = '#fff';
                     item.style.textShadow = '0 0 15px rgba(59, 130, 246, 0.8)';
                 } else {
                     item.style.color = 'rgba(255,255,255,0.2)';
                     item.style.textShadow = 'none';
+                }
+            });
+
+            // Update Mobile Pagination Dots (Mobile)
+            mobileDots.forEach((dot, idx) => {
+                const rel = Math.abs(idx - current);
+                if (rel < 0.5) {
+                    dot.style.width = '24px';
+                    dot.style.backgroundColor = '#3b82f6';
+                    dot.style.boxShadow = '0 0 10px rgba(59, 130, 246, 0.8)';
+                } else {
+                    dot.style.width = '8px';
+                    dot.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    dot.style.boxShadow = 'none';
                 }
             });
 
