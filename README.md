@@ -1,42 +1,39 @@
 # Amanpreet Singh | Full-Stack Developer
 
-I am a full-stack developer based near Sirsa, focused on building resilient web applications and clean digital tools.
+This repository contains the source code and architectural documentation for my personal web portfolio. Operating as a full-stack developer based near Sirsa, Haryana, my focus is on engineering resilient web applications and robust digital infrastructure.
 
-## About This Repository
+## Architectural Overview
 
-This repository hosts my personal portfolio. Instead of relying on boilerplate templates, I built a custom 3D scroll engine using Vanilla JavaScript, CSS 3D perspective transforms, and Linear Interpolation (LERP) for fluid depth navigation. On mobile viewports, the interface automatically switches to a hardware-friendly 2D translation fallback, paired with interactive pagination dots linked directly to the scroll engine.
+Rather than utilizing standard boilerplate templates, the portfolio interface implements a custom 3D scrolling engine. This system is constructed using native JavaScript and CSS 3D perspective transformations. It utilizes Linear Interpolation (LERP) to compute fluid depth navigation (`current += (target - current) * 0.12`). 
 
-## The Mindset
+For mobile viewports, the application programmatically degrades to a hardware-optimized 2D translation model. This fallback is supported by dynamic pagination linked directly to the primary animation loop, ensuring stable 60fps rendering on low-power mobile graphics processing units. The visual interface strictly adheres to a `#050505` background, utilizing backdrop blurring, glassmorphic elevation, and responsive Tailwind CSS layouts.
 
-I approach software engineering the same way I approach Taekwondo and boxing: you cannot fake a foundation. Whether I am debugging relational database queries, profiling frontend render performance, or breaking down Japanese Kanji compounds, my rule is the same. I focus on putting in the repetitions, understanding the underlying mechanics rather than relying on heavy abstractions, and building systems that hold up under real pressure.
+## Engineering Philosophy
 
-## Tech Stack
+My development methodology is grounded in building from fundamental principles rather than relying heavily on high-level abstractions. Whether optimizing relational database queries, profiling frontend rendering performance, or parsing complex data structures, the priority remains strict adherence to core mechanics, structured testing, and scalable architecture.
 
-* **Frontend Architecture:** HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Bootstrap
-* **Backend & Databases:** PHP, Python, Java, SQL (MySQL, Relational Database Design)
+## Technical Stack
 
-## Projects & Experience
+*   **Frontend Infrastructure:** HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Bootstrap
+*   **Backend & Data Systems:** PHP, Python, Java, SQL (MySQL, Relational Database Design)
 
-### 1. Kissa Punjab: Client Platform
-Built for Gurpreet Sidhu. A custom production web platform designed to host historical Punjabi literature and distribute digital publications.
-* **Architecture:** Designed a normalized SQL schema separating customer identities, order transactions, and digital publication entitlements.
-* **Security:** Implemented secure e-book fulfillment. Instead of exposing vulnerable static asset links, a custom PHP delivery handler verifies active session tokens, validates payment status, and streams the binary with rate-limited response headers.
-* **Execution:** Managed real-world client expectations and scope creep firsthand, locking down core deliverables to ensure a stable, on-schedule production launch.
+## Project Profiles
 
-### 2. Smart Kanji Analyzer: Japanese Language Tool
-A custom web tool engineered to solve my own bottleneck while studying Japanese. It eliminates the need to pause mid-sentence to look up unfamiliar Kanji in third-party dictionaries.
-* **Architecture:** Features a client-side parsing engine that analyzes raw Japanese text blocks, isolating individual Kanji characters and compound expressions.
-* **Functionality:** Maps parsed tokens against structured datasets to instantly surface Onyomi and Kunyomi readings, radical breakdowns, English definitions, and JLPT difficulty levels.
-* **Performance:** Engineered with zero external bloat for sub-millisecond local lookups, built purely for frictionless text immersion.
+### 1. Kissa Punjab: Production Client Platform
+A production-grade web platform developed to archive and distribute historical Punjabi literature for a private client.
 
-## Portfolio Architecture & Performance
+*   **System Architecture:** Features a normalized SQL database schema designed to separate user identities, transaction records, and digital asset access rights.
+*   **Security Implementation:** Bypasses vulnerable static asset linking in favor of a secure PHP delivery handler. This backend controller authenticates active session tokens, verifies payment states, and streams digital publications using rate-limited response headers to prevent unauthorized distribution.
+*   **Project Management:** Navigated real-world client requirements and scope constraints to deliver a stable, on-schedule production deployment.
 
-* **3D Scroll Engine:** Vanilla JavaScript LERP computing `current += (target - current) * 0.12` to animate 3D perspective matrices and cylindrical dial rotation without heavy animation libraries.
-* **Mobile 2D Fallback:** Automatically switches to lightweight vertical translation on touch devices under 768px to ensure 60fps performance on low-power mobile GPUs.
-* **Dynamic Pagination Dots:** Mobile-only progress indicator linked into the animation loop that dynamically expands and highlights the active section based on the continuous scroll fraction.
-* **Design System:** Pure #050505 background with backdrop blur, glassmorphic card elevation, and responsive Tailwind layouts.
+### 2. Smart Kanji Analyzer: Linguistic Processing Tool
+A localized web application engineered to parse and analyze Japanese text, designed to eliminate workflow interruptions during language acquisition.
 
-## Connect
+*   **System Architecture:** Integrates a client-side parsing engine that segments raw Japanese text strings, isolating distinct Kanji characters and morphological components without external backend bloat.
+*   **Data Mapping:** Correlates parsed tokens against integrated datasets to return Onyomi and Kunyomi readings, radical breakdowns, English definitions, and standardized proficiency levels.
+*   **Performance:** Operates entirely client-side, achieving sub-millisecond local retrieval times for frictionless reading immersion.
 
-* **GitHub:** [@Amanpreet6656](https://github.com/Amanpreet6656)
-* **Email:** amanpreet6656@gmail.com
+## Contact Information
+
+*   **GitHub:** [@Amanpreet6656](https://github.com/Amanpreet6656)
+*   **Email:** amanpreet6656@gmail.com
