@@ -36,4 +36,4 @@ A localized web application engineered to parse and analyze Japanese text, desig
 ## Contact Information
 
 *   **GitHub:** [@Amanpreet6656](https://github.com/Amanpreet6656)
-*   **Email:** amanpreet6656@gmail.com
+*   **Email:** amanpreetsingh21605@gmail.com
