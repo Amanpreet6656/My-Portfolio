@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanpreet Singh | Full-Stack Software Engineer</title>
+  <meta name="description" content="Engineering portfolio of Amanpreet Singh. Specializing in offline-first web architecture, C++ inference engines, and custom client platforms.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='6' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%23FF0000'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP & Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+
+  <!-- Portfolio Engine -->
+  <script src="main.js" defer></script>
+</head>
+<body data-page="index">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">AMANPREET SINGH</a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">INDEX</a>
+        <a href="work.html" class="nav-link">WORK</a>
+        <a href="system.html" class="nav-link">SYSTEM</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="btn-theme" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-label">LIGHT</span>
+        </button>
+        <button type="button" class="btn-menu" id="nav-menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <a href="index.html" class="mobile-nav-link">INDEX</a>
+    <a href="work.html" class="mobile-nav-link">WORK</a>
+    <a href="system.html" class="mobile-nav-link">SYSTEM</a>
+    <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-content">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1 class="hero-title">Amanpreet Singh.</h1>
+            <p class="hero-role">Full-Stack Software Engineer.</p>
+            <p class="hero-sub">Specializing in offline-first web architecture, C++ inference engines, and custom client platforms.</p>
+            <div class="hero-actions">
+              <a href="work.html" class="featured-link">EXPLORE WORK &rarr;</a>
+              <a href="contact.html" class="featured-link" style="background: var(--bg-1);">DIRECT COMMS &rarr;</a>
+            </div>
+          </div>
+          <div class="hero-profile-frame">
+            <img src="assets/amanpreet.jpg" alt="Amanpreet Singh" class="hero-profile-img" onerror="this.onerror=null; this.src='profile.svg';">
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-cue">SCROLL TO INSPECT ARCHITECTURE &darr;</div>
+    </section>
+
+    <!-- Core Competencies -->
+    <div class="divider-full"></div>
+    <section class="section scatter-section" id="competencies">
+      <h2 class="section-heading">01 / CORE COMPETENCIES</h2>
+
+      <div class="grid-3">
+        <!-- Frontend Architecture -->
+        <div class="scatter-item competency-card card-interactive">
+          <span class="competency-index">DOMAIN_01</span>
+          <h3 class="competency-title">Frontend Architecture</h3>
+          <p class="competency-desc">Zero-dependency UI engineering. Custom 3D perspective projection and N-body spatial physics on raw HTML5 Canvas. Offline-first client architectures built without framework abstraction layers.</p>
+          <div class="competency-stack">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">VANILLA JS ES6+</span>
+            <span class="tag">CANVAS 2D</span>
+            <span class="tag">WEB STORAGE API</span>
+          </div>
+        </div>
+
+        <!-- Backend Telemetry -->
+        <div class="scatter-item competency-card card-interactive">
+          <span class="competency-index">DOMAIN_02</span>
+          <h3 class="competency-title">Backend Telemetry</h3>
+          <p class="competency-desc">REST API integration, structured data pipelines, and server-side request processing. Local persistence caching, relational query composition, and resilient state synchronization during network outages.</p>
+          <div class="competency-stack">
+            <span class="tag">PYTHON</span>
+            <span class="tag">SQL</span>
+            <span class="tag">PHP</span>
+            <span class="tag">REST APIS</span>
+            <span class="tag">INDEXEDDB</span>
+          </div>
+        </div>
+
+        <!-- Systems-Level C++ -->
+        <div class="scatter-item competency-card card-interactive">
+          <span class="competency-index">DOMAIN_03</span>
+          <h3 class="competency-title">Systems-Level C++</h3>
+          <p class="competency-desc">Machine learning inference engines compiled without external dependencies. 64-byte CPU cache line boundary alignment, compile-time polymorphism via C++17 templates, and zero virtual-dispatch hot paths.</p>
+          <div class="competency-stack">
+            <span class="tag">C++17</span>
+            <span class="tag">C</span>
+            <span class="tag">JAVA</span>
+            <span class="tag">CACHE LOCALITY</span>
+            <span class="tag">EDGE DEPLOYMENT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Project: Kissa Panjab -->
+    <div class="divider-full"></div>
+    <section class="section scatter-section" id="featured">
+      <h2 class="section-heading">02 / FEATURED PROJECT</h2>
+
+      <div class="scatter-item featured-project card-static">
+        <span class="featured-label">ACTIVE COMMERCIAL ENGAGEMENT</span>
+        <h3 class="featured-title">Kissa Panjab</h3>
+        <p class="featured-role">Role: Lead Web Developer for Gurpreet Sidhu.</p>
+        <p class="featured-desc">Building a multi-page brand platform and digital archive for Kissa Panjab. Architecting the complete frontend surface: responsive editorial layouts, interactive digital artifact presentation, and high-performance cultural documentation pages engineered for accessibility and sub-second load times across global networks.</p>
+        <div class="featured-stack">
+          <span class="tag tag-accent">LEAD DEVELOPER</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">VANILLA JS</span>
+          <span class="tag">RESPONSIVE DESIGN</span>
+          <span class="tag">DIGITAL ARCHIVE</span>
+        </div>
+        <a href="work.html" class="featured-link">VIEW PROJECT IN ARCHIVE &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-ident">
+        <span class="footer-name">AMANPREET SINGH</span>
+        <span class="footer-year">2026</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/amanpreet6656" class="footer-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="contact.html" class="footer-link">CONTACT</a>
+        <a href="privacy.html" class="footer-link">PRIVACY</a>
+        <a href="terms.html" class="footer-link">TERMS</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

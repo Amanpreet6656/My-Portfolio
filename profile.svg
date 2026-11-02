@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#0D0D0D"/>
+  
+  <!-- Grid Matrix Lines -->
+  <line x1="0" y1="50" x2="400" y2="50" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="0" y1="350" x2="400" y2="350" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="50" y1="0" x2="50" y2="400" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="350" y1="0" x2="350" y2="400" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="200" y1="0" x2="200" y2="400" stroke="#141414" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Corner Brackets -->
+  <path d="M12 28 V12 H28" fill="none" stroke="#FF0000" stroke-width="2"/>
+  <path d="M388 28 V12 H372" fill="none" stroke="#333333" stroke-width="1"/>
+  <path d="M12 372 V388 H28" fill="none" stroke="#333333" stroke-width="1"/>
+  <path d="M388 372 V388 H372" fill="none" stroke="#FF0000" stroke-width="2"/>
+
+  <!-- Top Metadata -->
+  <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#888888" letter-spacing="1.5">ID: AS-8924</text>
+  <rect x="350" y="30" width="6" height="6" fill="#FF0000"/>
+  <text x="340" y="36" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#AAAAAA" text-anchor="end" letter-spacing="1">AUTHENTICATED</text>
+
+  <!-- Brutalist Wireframe Silhouette -->
+  <!-- Shoulders -->
+  <path d="M110 350 L110 310 L140 280 L260 280 L290 310 L290 350 Z" fill="#171717" stroke="#333333" stroke-width="1.5"/>
+  
+  <!-- Neck & Collar -->
+  <polygon points="175,280 225,280 220,240 180,240" fill="#1C1C1C" stroke="#333333" stroke-width="1"/>
+  
+  <!-- Head & Jaw Geometry -->
+  <polygon points="160,135 240,135 245,190 230,245 170,245 155,190" fill="#222222" stroke="#444444" stroke-width="1.5"/>
+  
+  <!-- Hair / Crown block -->
+  <polygon points="152,140 160,110 240,110 248,140 238,125 162,125" fill="#111111" stroke="#333333" stroke-width="1"/>
+
+  <!-- Visor / Sensory Access Line -->
+  <rect x="165" y="165" width="70" height="6" fill="#FF0000" opacity="0.9"/>
+  <line x1="150" y1="168" x2="250" y2="168" stroke="#FF0000" stroke-width="0.75" stroke-dasharray="2,3"/>
+
+  <!-- Facial Plane Accents -->
+  <line x1="200" y1="175" x2="200" y2="230" stroke="#2B2B2B" stroke-width="1"/>
+  <line x1="175" y1="210" x2="225" y2="210" stroke="#2B2B2B" stroke-width="1"/>
+
+  <!-- Crosshairs / Reticle Elements -->
+  <circle cx="200" cy="168" r="40" fill="none" stroke="#222222" stroke-width="1" stroke-dasharray="3,6"/>
+  <line x1="195" y1="168" x2="205" y2="168" stroke="#FFFFFF" stroke-width="1"/>
+  <line x1="200" y1="163" x2="200" y2="173" stroke="#FFFFFF" stroke-width="1"/>
+
+  <!-- Bottom Metadata -->
+  <rect x="24" y="325" width="4" height="18" fill="#FF0000"/>
+  <text x="36" y="338" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FAFAFA" letter-spacing="1">AMANPREET SINGH</text>
+  <text x="36" y="350" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="500" fill="#666666" letter-spacing="1.5">FULL-STACK ENGINEER // C++ // WEB</text>
+  <text x="376" y="345" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#888888" text-anchor="end">SYS: 0x01</text>
+</svg>
