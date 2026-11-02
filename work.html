@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Archive | Amanpreet Singh</title>
+  <meta name="description" content="Technical project archive for Amanpreet Singh. Smart Kanji Analyzer, InferC C++17 Inference Engine, BuildLedger Pro, and Japan Seismic & Weather Dashboard.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='6' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%23FF0000'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP & Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+
+  <!-- Portfolio Engine -->
+  <script src="main.js" defer></script>
+</head>
+<body data-page="work">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">AMANPREET SINGH</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">INDEX</a>
+        <a href="work.html" class="nav-link">WORK</a>
+        <a href="system.html" class="nav-link">SYSTEM</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="btn-theme" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-label">LIGHT</span>
+        </button>
+        <button type="button" class="btn-menu" id="nav-menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <a href="index.html" class="mobile-nav-link">INDEX</a>
+    <a href="work.html" class="mobile-nav-link">WORK</a>
+    <a href="system.html" class="mobile-nav-link">SYSTEM</a>
+    <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1 class="page-header-title">The Archive.</h1>
+        <p class="page-header-sub">Production and systems engineering projects. Each entry documents the mathematical foundations, architectural patterns, and execution constraints.</p>
+      </div>
+    </header>
+
+    <!-- Project 01: Smart Kanji Analyzer -->
+    <section class="section scatter-section">
+      <h2 class="section-heading">PROJECT 01 / NATURAL LANGUAGE SYSTEMS</h2>
+
+      <div class="project-entry">
+        <div class="scatter-item project-header">
+          <span class="project-index">01</span>
+          <h3 class="project-name">Smart Kanji Analyzer &amp; Nihongo Syntax Matrix</h3>
+        </div>
+
+        <p class="scatter-item project-subtitle">Offline-First Japanese Morphological &amp; Temporal Syntax Engine</p>
+
+        <div class="scatter-item project-body scatter-text">
+          <p>A full-stack linguistic platform engineered with vanilla JavaScript for analyzing Japanese temporal syntax and semantic structures. The parsing pipeline tokenizes unstructured text via Kuromoji.js (utilizing the complete IPA dictionary compiled into binary format), resolves kanji stroke and radical metadata through kanjiapi.dev REST endpoints, and computes real-time phonetic transliteration into Hepburn romaji.</p>
+          <p>The temporal syntax parser decomposes complex Japanese verb conjugations, classifying grammatical time aspects (aspectual auxiliaries, past/non-past markers, and relative temporal clauses). All dictionary lookups and API responses are committed to a deterministic Web Storage API cache layer, allowing the engine to execute completely offline after first-time dictionary hydration.</p>
+          <p>Eliminating framework abstraction layers guarantees sub-millisecond tokenization latency even across extensive paragraphs of authentic Japanese text.</p>
+        </div>
+
+        <div class="scatter-item project-detail-grid">
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">MORPHOLOGICAL ENGINE</div>
+            <div class="detail-value">Kuromoji.js (Binary IPA Dictionary)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">KANJI DATA SOURCE</div>
+            <div class="detail-value">kanjiapi.dev REST API</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">PERSISTENCE LAYER</div>
+            <div class="detail-value">Web Storage API (localStorage Cache)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">RUNTIME MODEL</div>
+            <div class="detail-value">Client-Side JavaScript (Zero Backend)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">PHONETICS</div>
+            <div class="detail-value">Hepburn Romaji Conversion Matrix</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">ARCHITECTURE</div>
+            <div class="detail-value">Offline-First, Zero Framework Runtime</div>
+          </div>
+        </div>
+
+        <div class="scatter-item project-tags">
+          <span class="tag tag-accent">VANILLA JS</span>
+          <span class="tag">KUROMOJI.JS</span>
+          <span class="tag">KANJIAPI.DEV</span>
+          <span class="tag">WEB STORAGE API</span>
+          <span class="tag">OFFLINE-FIRST</span>
+          <span class="tag">HEPBURN ROMAJI</span>
+          <span class="tag">NLP</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-full"></div>
+
+    <!-- Project 02: InferC Machine Learning Engine -->
+    <section class="section scatter-section">
+      <h2 class="section-heading">PROJECT 02 / SYSTEMS ENGINEERING</h2>
+
+      <div class="project-entry">
+        <div class="scatter-item project-header">
+          <span class="project-index">02</span>
+          <h3 class="project-name">InferC</h3>
+        </div>
+
+        <p class="scatter-item project-subtitle">C++17 Machine Learning Inference Engine for Edge Deployment</p>
+
+        <div class="scatter-item project-body scatter-text">
+          <p>A standalone, dependency-free neural network inference runtime engineered in ISO C++17. Designed specifically for deployment on edge and embedded microcontrollers where dynamic language runtimes, Python interpreters, and CUDA GPU toolchains cannot be provisioned.</p>
+          <p>Matrix transformation kernels are hand-crafted for high CPU cache locality. Contiguous memory buffers are strictly aligned to 64-byte boundaries (matching modern x86_64 and ARM L1/L2 cache lines) to prevent false sharing and minimize cache misses during intensive General Matrix Multiply (GEMM) sweeps. Compile-time template metaprogramming eliminates virtual dispatch overhead in the inner inference loops.</p>
+          <p>The forward computational pass supports fully connected dense layers, Rectified Linear Unit (ReLU) activations, and numerical softmax normalization. Model parameter weights are imported via a custom zero-copy binary serialization format.</p>
+        </div>
+
+        <div class="scatter-item project-detail-grid">
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">LANGUAGE STANDARD</div>
+            <div class="detail-value">C++17 (ISO/IEC 14882:2017)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">DEPENDENCY GRAPH</div>
+            <div class="detail-value">Zero External Libraries (C++ Standard Library)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">HARDWARE TARGET</div>
+            <div class="detail-value">Edge Microcontrollers &amp; Embedded CPUs</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">MEMORY STRATEGY</div>
+            <div class="detail-value">64-Byte Cache Line Boundary Alignment</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">DISPATCH MODEL</div>
+            <div class="detail-value">Compile-Time Polymorphism (Templates)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">LAYER ARCHITECTURE</div>
+            <div class="detail-value">Dense GEMM, ReLU, Softmax</div>
+          </div>
+        </div>
+
+        <div class="scatter-item project-tags">
+          <span class="tag tag-accent">C++17</span>
+          <span class="tag">ZERO DEPENDENCIES</span>
+          <span class="tag">CACHE LOCALITY</span>
+          <span class="tag">EDGE DEPLOYMENT</span>
+          <span class="tag">TEMPLATE METAPROGRAMMING</span>
+          <span class="tag">ML INFERENCE</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-full"></div>
+
+    <!-- Project 03: BuildLedger Pro -->
+    <section class="section scatter-section">
+      <h2 class="section-heading">PROJECT 03 / LOCAL-FIRST SOFTWARE</h2>
+
+      <div class="project-entry">
+        <div class="scatter-item project-header">
+          <span class="project-index">03</span>
+          <h3 class="project-name">BuildLedger Pro</h3>
+        </div>
+
+        <p class="scatter-item project-subtitle">Local-First Construction Payroll &amp; Attendance Manager</p>
+
+        <div class="scatter-item project-body scatter-text">
+          <p>A mission-critical payroll management tool engineered specifically for remote construction environments characterized by zero cellular reception. Built entirely with Vanilla JavaScript and the Web Storage API, eliminating cloud synchronization dependencies during critical daily operations.</p>
+          <p>The state management engine handles tradesperson rosters, hourly rate matrices, overtime brackets, and aggregate payroll reporting. Every state transition is written synchronously to local persistent storage, providing immediate crash resilience against battery depletion or browser termination.</p>
+          <p>The user interface eschews CSS component libraries in favor of sharp, high-contrast, touch-optimized layouts engineered for high visibility on ruggedized field tablets in direct sunlight.</p>
+        </div>
+
+        <div class="scatter-item project-detail-grid">
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">RUNTIME</div>
+            <div class="detail-value">Vanilla JavaScript ES6+</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">PERSISTENCE</div>
+            <div class="detail-value">Web Storage API (localStorage)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">NETWORK TOLERANCE</div>
+            <div class="detail-value">100% Offline-Operational</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">UI ARCHITECTURE</div>
+            <div class="detail-value">Hand-Crafted High-Contrast CSS</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">DATA PORTABILITY</div>
+            <div class="detail-value">Standard RFC 4180 CSV Export</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">TARGET HARDWARE</div>
+            <div class="detail-value">Ruggedized Site Tablets</div>
+          </div>
+        </div>
+
+        <div class="scatter-item project-tags">
+          <span class="tag tag-accent">VANILLA JS</span>
+          <span class="tag">WEB STORAGE API</span>
+          <span class="tag">OFFLINE-FIRST</span>
+          <span class="tag">LOCAL-FIRST</span>
+          <span class="tag">CONSTRUCTION TECH</span>
+          <span class="tag">CSV EXPORT</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-full"></div>
+
+    <!-- Project 04: Japan Seismic & Weather Dashboard -->
+    <section class="section scatter-section">
+      <h2 class="section-heading">PROJECT 04 / GEOPHYSICAL TELEMETRY</h2>
+
+      <div class="project-entry">
+        <div class="scatter-item project-header">
+          <span class="project-index">04</span>
+          <h3 class="project-name">Japan Seismic &amp; Weather Dashboard</h3>
+        </div>
+
+        <p class="scatter-item project-subtitle">Offline-First Telemetry Application Combining JMA Seismic Data &amp; Open-Meteo APIs</p>
+
+        <div class="scatter-item project-body scatter-text">
+          <p>A high-frequency geophysical telemetry web application tracking real-time seismic events and atmospheric parameters across the Japanese archipelago. The system combines open seismic data feeds from the Japan Meteorological Agency (JMA) with atmospheric forecasts from the Open-Meteo REST API.</p>
+          <p>Engineered for critical situational awareness during infrastructure disruptions, the application implements an offline-first caching pipeline. All fetched seismic intensity matrices (measuring Japanese seismic intensity <em>shindo</em> scales 1 through 7) and weather parameters are cached locally via the Web Storage API and IndexedDB. Even when telecommunication towers fail, the application continues to display cached seismic fault lines, localized warning thresholds, and recent historical seismicity.</p>
+          <p>Spatial cartography is rendered via native SVG coordinates and HTML5 canvas projections without external map tile dependencies (such as Mapbox or Google Maps), reducing initial network payload by over 90% and running at 60 FPS on low-power devices.</p>
+        </div>
+
+        <div class="scatter-item project-detail-grid">
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">SEISMIC SOURCE</div>
+            <div class="detail-value">JMA Seismic Event Feed (Shindo Scale 1-7)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">METEOROLOGICAL DATA</div>
+            <div class="detail-value">Open-Meteo High-Resolution REST API</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">OFFLINE STRATEGY</div>
+            <div class="detail-value">IndexedDB &amp; Web Storage API Cache Pipeline</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">CARTOGRAPHY ENGINE</div>
+            <div class="detail-value">Native SVG Coordinate Mapping &amp; HTML5 Canvas</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">DATA CONSUMPTION</div>
+            <div class="detail-value">Optimized JSON Stream Parsing</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">DEPLOYMENT SCOPE</div>
+            <div class="detail-value">Emergency Offline Situational Awareness</div>
+          </div>
+        </div>
+
+        <div class="scatter-item project-tags">
+          <span class="tag tag-accent">OFFLINE-FIRST</span>
+          <span class="tag">JMA SEISMIC DATA</span>
+          <span class="tag">OPEN-METEO API</span>
+          <span class="tag">INDEXEDDB</span>
+          <span class="tag">SVG CARTOGRAPHY</span>
+          <span class="tag">JAPAN TELEMETRY</span>
+          <span class="tag">VANILLA JS</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-ident">
+        <span class="footer-name">AMANPREET SINGH</span>
+        <span class="footer-year">2026</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/amanpreet6656" class="footer-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="contact.html" class="footer-link">CONTACT</a>
+        <a href="privacy.html" class="footer-link">PRIVACY</a>
+        <a href="terms.html" class="footer-link">TERMS</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

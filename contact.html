@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Comms | Amanpreet Singh</title>
+  <meta name="description" content="Direct communication interface for Amanpreet Singh. Full-Stack Software Engineer & Systems Developer.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='6' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%23FF0000'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP & Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+
+  <!-- Portfolio Engine -->
+  <script src="main.js" defer></script>
+</head>
+<body data-page="contact">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">AMANPREET SINGH</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">INDEX</a>
+        <a href="work.html" class="nav-link">WORK</a>
+        <a href="system.html" class="nav-link">SYSTEM</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="btn-theme" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-label">LIGHT</span>
+        </button>
+        <button type="button" class="btn-menu" id="nav-menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <a href="index.html" class="mobile-nav-link">INDEX</a>
+    <a href="work.html" class="mobile-nav-link">WORK</a>
+    <a href="system.html" class="mobile-nav-link">SYSTEM</a>
+    <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+  </div>
+
+  <main>
+    <!-- Header -->
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1 class="page-header-title">Direct Comms.</h1>
+        <p class="page-header-sub">Direct channel for academic admissions faculty, systems engineering inquiries, and technical collaboration.</p>
+      </div>
+    </header>
+
+    <!-- Primary Channels -->
+    <section class="section scatter-section">
+      <h2 class="section-heading">01 / PRIMARY CHANNELS</h2>
+
+      <div class="contact-action-grid">
+        <!-- Button 1: INITIALIZE EMAIL -->
+        <a href="mailto:amanpreetsingh21605@gmail.com" class="btn-massive card-interactive scatter-item">
+          <span class="btn-massive-label">PROTOCOL: RFC 5322 &bull; DIRECT INBOX</span>
+          <span class="btn-massive-action">[ INITIALIZE EMAIL ]</span>
+          <span class="btn-massive-sub">amanpreetsingh21605@gmail.com &rarr;</span>
+        </a>
+
+        <!-- Button 2: ACCESS GITHUB -->
+        <a href="https://github.com/amanpreet6656" target="_blank" rel="noopener noreferrer" class="btn-massive card-interactive scatter-item">
+          <span class="btn-massive-label">EXTERNAL REPOSITORY &bull; PUBLIC AUDIT</span>
+          <span class="btn-massive-action">[ ACCESS GITHUB ]</span>
+          <span class="btn-massive-sub">github.com/amanpreet6656 &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Telemetry and Communication Parameters -->
+      <div class="divider-full" style="margin: 1.5rem 0;"></div>
+      <h2 class="section-heading">02 / TELEMETRY &amp; OPERATIONAL PARAMETERS</h2>
+
+      <div class="telemetry-grid">
+        <div class="telemetry-cell card-static scatter-item">
+          <span class="telemetry-key">IDENTITY</span>
+          <span class="telemetry-val">Amanpreet Singh</span>
+          <span class="telemetry-desc">Full-Stack Software Engineer &amp; Systems Developer</span>
+        </div>
+
+        <div class="telemetry-cell card-static scatter-item">
+          <span class="telemetry-key">ACADEMIC TARGET</span>
+          <span class="telemetry-val">University of Aizu (会津大学)</span>
+          <span class="telemetry-desc">Computer Science &amp; Systems Engineering Research</span>
+        </div>
+
+        <div class="telemetry-cell card-static scatter-item">
+          <span class="telemetry-key">PRIMARY FOCUS</span>
+          <span class="telemetry-val">C++17 &bull; Offline Architecture</span>
+          <span class="telemetry-desc">Cache-optimized ML inference and native client platforms</span>
+        </div>
+
+        <div class="telemetry-cell card-static scatter-item">
+          <span class="telemetry-key">DISCIPLINE</span>
+          <span class="telemetry-val">Martial Arts (Taekwondo / Boxing)</span>
+          <span class="telemetry-desc">Rigorous physical discipline mirroring systems code standards</span>
+        </div>
+
+        <div class="telemetry-cell card-static scatter-item">
+          <span class="telemetry-key">RESPONSE LATENCY</span>
+          <span class="telemetry-val">&le; 24 Hours</span>
+          <span class="telemetry-desc">Direct email queue reviewed daily</span>
+        </div>
+
+        <div class="telemetry-cell card-static scatter-item">
+          <span class="telemetry-key">TIMEZONE</span>
+          <span class="telemetry-val">UTC+05:30 (IST)</span>
+          <span class="telemetry-desc">Synchronized with JST (Japan Standard Time, UTC+09:00)</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-ident">
+        <span class="footer-name">AMANPREET SINGH</span>
+        <span class="footer-year">2026</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/amanpreet6656" class="footer-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="contact.html" class="footer-link">CONTACT</a>
+        <a href="privacy.html" class="footer-link">PRIVACY</a>
+        <a href="terms.html" class="footer-link">TERMS</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

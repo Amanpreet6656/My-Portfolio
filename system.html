@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Capabilities | Amanpreet Singh</title>
+  <meta name="description" content="Technical stack, engineering methodology, martial arts discipline, and active research directions. Amanpreet Singh.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='6' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%23FF0000'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP & Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+
+  <!-- Portfolio Engine -->
+  <script src="main.js" defer></script>
+</head>
+<body data-page="system">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">AMANPREET SINGH</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">INDEX</a>
+        <a href="work.html" class="nav-link">WORK</a>
+        <a href="system.html" class="nav-link">SYSTEM</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="btn-theme" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-label">LIGHT</span>
+        </button>
+        <button type="button" class="btn-menu" id="nav-menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <a href="index.html" class="mobile-nav-link">INDEX</a>
+    <a href="work.html" class="mobile-nav-link">WORK</a>
+    <a href="system.html" class="mobile-nav-link">SYSTEM</a>
+    <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1 class="page-header-title">System Capabilities.</h1>
+        <p class="page-header-sub">Technical stack, engineering methodology, physical discipline, and active systems research vectors.</p>
+      </div>
+    </header>
+
+    <!-- The Stack -->
+    <section class="section scatter-section" id="stack">
+      <h2 class="section-heading">01 / THE STACK</h2>
+
+      <div class="stack-grid">
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">HTML</div>
+          <div class="stack-sub">SEMANTIC / A11Y</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">CSS</div>
+          <div class="stack-sub">GRID / VARIABLES</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">JavaScript</div>
+          <div class="stack-sub">ES6+ / VANILLA</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">Python</div>
+          <div class="stack-sub">AUTOMATION / DATA</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">SQL</div>
+          <div class="stack-sub">RELATIONAL / DDL</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">PHP</div>
+          <div class="stack-sub">SERVER TELEMETRY</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">C</div>
+          <div class="stack-sub">SYSTEMS / MEMORY</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">C++</div>
+          <div class="stack-sub">C++17 / INFERENCE</div>
+        </div>
+        <div class="scatter-item stack-item card-interactive">
+          <div class="stack-label">Java</div>
+          <div class="stack-sub">OBJECT RUNTIME</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-full"></div>
+
+    <!-- Engineering Methodology -->
+    <section class="section scatter-section" id="methodology">
+      <h2 class="section-heading">02 / ENGINEERING METHODOLOGY &amp; PHILOSOPHY</h2>
+
+      <div class="methodology-block scatter-item scatter-text">
+        <h3>Offline-First as Fundamental Architecture</h3>
+        <p>I architect software on the assumption that network connectivity is an unreliable, ephemeral luxury. Critical business data and user mutations must commit immediately to local persistence layers (Web Storage API or IndexedDB) prior to network transmission. This design ensures that systems deployed in remote construction sites, disaster-prone regions, or embedded industrial targets continue operating with deterministic integrity during complete network isolation.</p>
+      </div>
+
+      <div class="methodology-block scatter-item scatter-text">
+        <h3>Raw Performance Over Bloated Abstractions</h3>
+        <p>Modern frontend engineering has accumulated layers of redundant abstractions: virtual DOM diffing, multi-megabyte bundle dependencies, and opaque runtime overhead. I build production web applications utilizing Vanilla JavaScript (ES6+) directly against native Web APIs. This reduces application payloads to minimal footprints, achieves wire-speed execution, and ensures predictable garbage collection cycles.</p>
+        <p>In systems-level C++, compile-time template metaprogramming replaces runtime dynamic polymorphism. Virtual dispatch pointer dereferences are eliminated from the critical computational path, and memory buffers are strictly aligned to 64-byte hardware cache boundaries.</p>
+      </div>
+
+      <div class="methodology-block scatter-item scatter-text">
+        <h3>Custom Mathematics from First Principles</h3>
+        <p>Rather than importing heavy graphics libraries (such as Three.js or Babylon.js), I implement spatial mathematics, 3D perspective projection matrices, orthonormal camera basis transformations, and N-body Coulomb anti-gravity physics from first principles. Writing linear algebra directly yields total transparency, zero dependency vulnerabilities, and complete control over computational efficiency.</p>
+      </div>
+
+      <div class="methodology-block scatter-item scatter-text">
+        <h3>Discipline Formed Through Martial Arts</h3>
+        <p>A rigorous, disciplined approach to code is directly mirrored by continuous martial arts training in Taekwondo and Boxing. The physical demands of combat sports - kinetic economy of motion, spatial awareness, mental composure under high stress, and relentless technical repetition - translate seamlessly into writing fault-tolerant systems software. Code, like striking technique, must possess zero excess movement, precise execution, and unyielding structural integrity.</p>
+      </div>
+    </section>
+
+    <div class="divider-full"></div>
+
+    <!-- Active Research Vectors -->
+    <section class="section scatter-section" id="research">
+      <h2 class="section-heading">03 / ACTIVE RESEARCH VECTORS</h2>
+
+      <div class="scatter-item methodology-block scatter-text">
+        <h3>WebAssembly via the Emscripten Toolchain</h3>
+        <p>Actively researching the compilation of modular C++ machine learning kernels into WebAssembly (WASM) using Emscripten. The goal is to deploy the InferC forward pass directly within modern browsers, executing cache-optimized tensor arithmetic at near-native binary speeds without requiring server round-trips or specialized runtime installations.</p>
+      </div>
+
+      <div class="scatter-item methodology-block scatter-text">
+        <h3>Unreal Engine 5 Real-Time Rendering Pipelines</h3>
+        <p>Investigating the intersection between low-level CPU spatial math and GPU shader execution architectures within Unreal Engine 5. Focus areas include analyzing how virtualized microgeometry systems (Nanite) and real-time indirect illumination (Lumen) correlate with the custom perspective projection, depth-sorting, and force-directed algorithms implemented across my web graphics projects.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-ident">
+        <span class="footer-name">AMANPREET SINGH</span>
+        <span class="footer-year">2026</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/amanpreet6656" class="footer-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="contact.html" class="footer-link">CONTACT</a>
+        <a href="privacy.html" class="footer-link">PRIVACY</a>
+        <a href="terms.html" class="footer-link">TERMS</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
