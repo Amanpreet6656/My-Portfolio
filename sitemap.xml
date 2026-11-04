@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Page (index.html) -->
   <url>
     <loc>https://amanpreet-singh.vercel.app/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Work Section -->
   <url>
     <loc>https://amanpreet-singh.vercel.app/work.html</loc>
     <lastmod>2026-11-04</lastmod>
@@ -16,7 +13,6 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- System Section -->
   <url>
     <loc>https://amanpreet-singh.vercel.app/system.html</loc>
     <lastmod>2026-11-04</lastmod>
@@ -24,15 +20,13 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact Page -->
   <url>
     <loc>https://amanpreet-singh.vercel.app/contact.html</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Legal Pages -->
+  
   <url>
     <loc>https://amanpreet-singh.vercel.app/privacy.html</loc>
     <lastmod>2026-11-04</lastmod>
