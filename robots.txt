@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amanpreet-singh.vercel.app/sitemap.xml
