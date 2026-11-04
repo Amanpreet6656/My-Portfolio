@@ -92,6 +92,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Ensure main content container prevents horizontal layout overflow from animated transforms */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
@@ -399,7 +405,7 @@ body {
   border-radius: 0 !important;
   border: 1px solid #333333;
   filter: grayscale(100%) contrast(110%);
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: filter 0.2s ease, border-color 0.2s ease, transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translate(0, 0);
   box-shadow: none !important;
 }
@@ -734,7 +740,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 4px;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 .detail-value {
@@ -743,7 +749,8 @@ body {
   font-weight: 600;
   color: var(--fg-0);
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  word-break: break-word;
 }
 
 .project-tags {
@@ -771,7 +778,7 @@ body {
   color: var(--fg-0);
   letter-spacing: 0.04em;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 .stack-sub {
@@ -781,7 +788,7 @@ body {
   margin-top: 4px;
   letter-spacing: 0.04em;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 .methodology-block {
