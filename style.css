@@ -1178,3 +1178,169 @@ main {
     font-size: 18px;
   }
 }
+
+/* ============================================================
+   SEO/AEO ADDITIONS: Content Meta, FAQ, Competency Detail
+   ============================================================ */
+
+/* Author byline + last-updated timestamp row */
+.content-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--accent);
+  background: var(--bg-1);
+  font-size: 0.75rem;
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.content-meta strong {
+  color: var(--fg-0);
+  font-weight: 600;
+}
+
+.content-meta time {
+  color: var(--fg-1);
+}
+
+.content-author::before {
+  content: "AUTHOR: ";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.content-updated::before {
+  content: "UPDATED: ";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Expanded competency detail paragraphs */
+.competency-detail {
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--fg-2);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+/* FAQ list container */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+}
+
+/* Individual FAQ item using native <details> for clean semantics */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-1);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Summary / question line */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--fg-0);
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-mono);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.faq-item[open] > .faq-question::after {
+  content: "-";
+}
+
+.faq-question:hover {
+  background: var(--bg-2);
+  color: var(--accent);
+}
+
+.faq-item[open] > .faq-question {
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Answer body */
+.faq-answer {
+  padding: 1rem 1.25rem 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--fg-1);
+  font-family: var(--font-mono);
+}
+
+.faq-answer p + p {
+  margin-top: 0.75rem;
+}
+
+.faq-answer strong {
+  color: var(--fg-0);
+  font-weight: 600;
+}
+
+.faq-answer a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+.faq-answer a:hover {
+  opacity: 0.75;
+}
+
+/* Responsive adjustments for content-meta */
+@media (max-width: 600px) {
+  .content-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .faq-question {
+    font-size: 0.78rem;
+    padding: 1rem;
+  }
+
+  .faq-answer {
+    padding: 0.9rem 1rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  .competency-detail {
+    font-size: 0.75rem;
+  }
+}

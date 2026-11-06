@@ -1,0 +1,21 @@
+# Amanpreet Singh - Full-Stack Software Engineer
+
+Amanpreet Singh is a Full-Stack Software Engineer specializing in offline-first web architecture, dependency-free C++ machine learning inference engines, and custom client-side platforms. His engineering work targets environments where network connectivity and heavy runtime dependencies cannot be assumed: remote industrial sites, embedded edge hardware, and culturally underserved infrastructure regions.
+
+Core technical specializations: Vanilla JavaScript (ES6+) against native Web APIs without framework abstraction layers; C++17 systems-level development with 64-byte cache line boundary alignment, compile-time template metaprogramming, and zero virtual-dispatch hot paths; HTML5 Canvas 2D for custom spatial mathematics and physics simulation; Web Storage API and IndexedDB for local-first data persistence; REST API integration and structured data pipeline construction; and responsive editorial-grade CSS architecture without utility library dependencies.
+
+Active commercial and open projects include Kissa Panjab (lead frontend developer for a Punjabi cultural digital archive), InferC (a dependency-free C++17 ML inference engine for edge microcontrollers), BuildLedger Pro (a local-first construction payroll manager for zero-connectivity field environments), the Smart Kanji Analyzer (an offline Japanese morphological and temporal syntax engine), and the Japan Seismic and Weather Dashboard (an offline-first geophysical telemetry application using JMA and Open-Meteo data feeds with native SVG cartography).
+
+Active research vectors include WebAssembly compilation of C++ ML kernels via the Emscripten toolchain, and analysis of real-time GPU rendering pipelines (Nanite virtualized microgeometry, Lumen indirect illumination) within Unreal Engine 5 in relation to custom software rasterization work.
+
+Contact: amanpreetsingh21605@gmail.com
+GitHub: https://github.com/amanpreet6656
+
+## Key Pages
+
+- [Portfolio Index](https://amanpreet-singh.vercel.app/): Technical overview, core competencies, and featured project summary.
+- [Work Archive](https://amanpreet-singh.vercel.app/work.html): Full project archive with technical specification matrices for each engineering project.
+- [System Capabilities](https://amanpreet-singh.vercel.app/system.html): Full technology stack, engineering methodology, and active research directions.
+- [Direct Comms / Contact](https://amanpreet-singh.vercel.app/contact.html): Direct email contact and communication parameters.
+- [Privacy Policy](https://amanpreet-singh.vercel.app/privacy.html): Data handling and zero-collection architecture declaration.
+- [Terms and Conditions](https://amanpreet-singh.vercel.app/terms.html): Intellectual property, inspection license, and usage terms.
