@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://amanpreet-singh.vercel.app/sitemap.xml
+
+# LLM-readable machine context file (llmstxt.org standard)
+# https://amanpreet-singh.vercel.app/llms.txt
