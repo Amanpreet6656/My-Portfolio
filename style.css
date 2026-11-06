@@ -1344,3 +1344,94 @@ main {
     font-size: 0.75rem;
   }
 }
+
+/* ============================================================
+   TECHNICAL TOOLTIPS via <abbr class="term-def">
+   CSS-only, no JavaScript, fully accessible to HTML parsers.
+   The definition text lives in the title attribute and is also
+   rendered visually on hover/focus via a ::after pseudo-element.
+   ============================================================ */
+
+.term-def {
+  /* Distinguish from plain text without being garish */
+  text-decoration: underline dotted var(--fg-3);
+  text-underline-offset: 3px;
+  cursor: help;
+  color: inherit;
+  font-style: normal;
+  position: relative;
+  /* Prevent the tooltip from clipping at card edges */
+  isolation: isolate;
+}
+
+/* Tooltip bubble */
+.term-def::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Geometry */
+  width: 280px;
+  padding: 0.6rem 0.75rem;
+
+  /* Appearance: matches existing dark card style */
+  background: var(--bg-3);
+  color: var(--fg-1);
+  border: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  text-align: left;
+  white-space: normal;
+
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 100;
+}
+
+/* Show on hover and keyboard focus */
+.term-def:hover::after,
+.term-def:focus-visible::after {
+  opacity: 1;
+}
+
+/* Caret arrow pointing down */
+.term-def::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--border-strong);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 101;
+}
+
+.term-def:hover::before,
+.term-def:focus-visible::before {
+  opacity: 1;
+}
+
+/* Prevent tooltips on the right side of the grid from overflowing off-screen */
+@media (max-width: 900px) {
+  .term-def::after {
+    width: 230px;
+    left: 0;
+    transform: none;
+  }
+
+  .term-def::before {
+    left: 12px;
+    transform: none;
+  }
+}

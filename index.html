@@ -42,9 +42,15 @@
     "image": "https://amanpreet-singh.vercel.app/assets/amanpreet.jpg",
     "jobTitle": "Full-Stack Software Engineer",
     "description": "Full-Stack Software Engineer specializing in offline-first web architecture, C++ inference engines, systems-level performance optimization, and custom client platforms.",
+    "specialty": [
+      "Offline-first web architecture",
+      "C++ inference engines",
+      "Zero-dependency UI engineering"
+    ],
     "knowsAbout": [
       "Offline-first web architecture",
       "C++ inference engines",
+      "Zero-dependency UI engineering",
       "Cache-optimized matrix computation",
       "Vanilla JavaScript ES6+",
       "HTML5 Canvas 2D rendering",
@@ -63,7 +69,7 @@
         "@type": "Country",
         "name": "India"
       },
-      "skills": "Offline-first web architecture, C++ inference engines, Vanilla JavaScript, HTML5 Canvas, Web Storage API, IndexedDB, C++17, template metaprogramming, edge deployment, REST APIs, Python, SQL, PHP"
+      "skills": "Offline-first web architecture, C++ inference engines, zero-dependency UI engineering, Vanilla JavaScript, HTML5 Canvas, Web Storage API, IndexedDB, C++17, template metaprogramming, edge deployment, REST APIs, Python, SQL, PHP"
     },
     "alumniOf": {
       "@type": "EducationalOrganization",
@@ -108,19 +114,25 @@
   }
   </script>
 
-  <!-- JSON-LD Structured Data: SoftwareApplication (Kissa Panjab) -->
+  <!-- JSON-LD Structured Data: CreativeWork (Kissa Panjab) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "CreativeWork",
     "name": "Kissa Panjab",
-    "description": "A multi-page brand platform and digital archive for Kissa Panjab, a cultural documentation project by Gurpreet Sidhu. Architected as a zero-dependency, offline-capable frontend with responsive editorial layouts, interactive digital artifact presentation, and sub-second load times engineered for global network accessibility.",
+    "description": "A multi-page brand platform and digital archive for Kissa Panjab, a Punjabi cultural documentation project by Gurpreet Sidhu. Architected as a zero-dependency, offline-capable frontend with responsive editorial layouts, interactive digital artifact presentation, and sub-second load times engineered for global network accessibility.",
     "author": {
       "@id": "https://amanpreet-singh.vercel.app/#person"
     },
-    "programmingLanguage": ["HTML5", "CSS3", "JavaScript"],
-    "applicationCategory": "Cultural archive and brand platform",
-    "keywords": "Kissa Panjab, Punjabi cultural archive, digital preservation, responsive editorial design, offline-first"
+    "contributor": {
+      "@type": "Person",
+      "name": "Gurpreet Sidhu"
+    },
+    "encodingFormat": ["text/html", "text/css", "application/javascript"],
+    "genre": "Cultural archive and brand platform",
+    "keywords": "Kissa Panjab, Punjabi cultural archive, digital preservation, responsive editorial design, offline-first, zero-dependency frontend",
+    "inLanguage": ["en", "pa"],
+    "abstract": "Lead developer engagement for a Punjabi cultural documentation initiative. The core architectural constraint was sub-second delivery of archival content across variable network conditions without server-side rendering, database round-trips, or JavaScript framework initialization overhead. Solution: fully static HTML5/CSS3/Vanilla JS, served from CDN edge nodes with a single-document critical rendering path."
   }
   </script>
 
@@ -135,7 +147,7 @@
         "name": "What is offline-first web architecture?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Offline-first web architecture is a design philosophy in which all critical application state mutations are written to local browser persistence layers (Web Storage API or IndexedDB) before any network transmission attempt is made. The application is fully functional without an active internet connection; network synchronization is treated as an optional enhancement rather than a prerequisite. This pattern eliminates data loss during connectivity failures, ensures deterministic behavior in remote environments, and removes server round-trips from the critical rendering path, reducing perceived latency to near zero for read operations."
+          "text": "Offline-first web architecture writes all application state mutations to local browser storage (Web Storage API or IndexedDB) before any network call. The app runs fully without an internet connection; network sync is optional. This eliminates data loss on connectivity failure, ensures deterministic behavior in remote environments, and reduces read latency to near zero once the cache is populated."
         }
       },
       {
@@ -143,7 +155,7 @@
         "name": "What are the advantages of a dependency-free C++ inference engine over Python-based frameworks like PyTorch or TensorFlow?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Python-based ML frameworks require large runtime environments (CPython interpreter, CUDA toolkit, shared libraries totalling several gigabytes) that cannot be provisioned on edge microcontrollers or embedded CPUs with kilobytes of available memory. A dependency-free C++ inference engine compiled to a single static binary eliminates this overhead entirely. Additional advantages include: (1) predictable memory layout via 64-byte cache line boundary alignment, reducing L1/L2 cache miss rates during matrix multiply sweeps; (2) zero virtual dispatch overhead through compile-time template metaprogramming (C++17), which the compiler resolves at build time; (3) a zero-copy binary weight format avoiding deserialization overhead at model load time; and (4) direct portability to any POSIX target without dependency resolution."
+          "text": "Python ML frameworks require gigabytes of runtime (CPython, CUDA, shared libraries) that cannot fit on edge microcontrollers. A dependency-free C++ inference engine compiles to a single static binary and runs anywhere. Key advantages: 64-byte cache line alignment eliminates false sharing during GEMM sweeps; C++17 template metaprogramming resolves polymorphic dispatch at compile time with no vtable overhead; zero-copy binary weight format skips deserialization; and the binary is portable to any POSIX target without dependency tooling."
         }
       },
       {
@@ -151,7 +163,7 @@
         "name": "What was the core architectural problem that the Kissa Panjab project needed to solve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kissa Panjab required a cultural documentation platform capable of presenting high-resolution archival content, editorial layouts, and digital artifacts at sub-second load times across network conditions ranging from high-bandwidth metropolitan connections to constrained rural infrastructure in South Asia. The architectural constraint was to achieve this without server-side rendering dependencies, database round-trips, or heavy frontend framework bundles. The solution was a fully static, zero-dependency HTML5/CSS3/Vanilla JS frontend with hand-crafted responsive editorial CSS, ensuring the entire platform loads from CDN edge nodes without any JavaScript framework initialization delay."
+          "text": "Kissa Panjab needed sub-second delivery of high-resolution archival content across network conditions from metropolitan gigabit to constrained rural infrastructure in South Asia, without server-side rendering, database round-trips, or a JavaScript framework boot cycle. The solution was a fully static, zero-dependency HTML5/CSS3/Vanilla JS frontend served from CDN edge nodes. The critical rendering path is one HTML document, one stylesheet, and one deferred script."
         }
       },
       {
@@ -159,10 +171,31 @@
         "name": "What services does Amanpreet Singh offer as a freelance developer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Amanpreet Singh provides: (1) offline-first and local-first web application development for environments with unreliable connectivity; (2) custom frontend architecture using Vanilla JavaScript, HTML5 Canvas, and Web Storage APIs without framework dependencies; (3) systems-level C++ development for ML inference engines, edge deployment targets, and cache-optimized computation kernels; (4) REST API integration and structured data pipeline construction; and (5) custom brand platforms and digital archive systems. Direct inquiries can be sent to amanpreetsingh21605@gmail.com."
+          "text": "Amanpreet Singh offers: offline-first and local-first web application development; zero-dependency frontend architecture with Vanilla JavaScript and HTML5 Canvas; systems-level C++ for ML inference engines and edge targets; REST API integration and data pipelines; and custom brand platforms and digital archive systems. Contact: amanpreetsingh21605@gmail.com."
         }
       }
     ]
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data: Speakable (AEO / Voice Search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://amanpreet-singh.vercel.app/#webpage",
+    "url": "https://amanpreet-singh.vercel.app/",
+    "name": "Amanpreet Singh | Full-Stack Software Engineer",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        ".hero-sub",
+        ".faq-answer"
+      ]
+    },
+    "about": {
+      "@id": "https://amanpreet-singh.vercel.app/#person"
+    }
   }
   </script>
 </head>
@@ -214,7 +247,7 @@
             </div>
           </div>
           <div class="hero-profile-frame">
-            <img src="assets/amanpreet.jpg" alt="Amanpreet Singh, Full-Stack Software Engineer" class="hero-profile-img" onerror="this.onerror=null; this.src='profile.svg';">
+            <img src="assets/amanpreet.jpg" alt="Amanpreet Singh, Full-Stack Software Engineer" class="hero-profile-img" loading="lazy" onerror="this.onerror=null; this.src='profile.svg';">
           </div>
         </div>
       </div>
@@ -237,8 +270,13 @@
         <div class="scatter-item competency-card card-interactive">
           <span class="competency-index">DOMAIN_01</span>
           <h3 class="competency-title">Frontend Architecture</h3>
-          <p class="competency-desc">Zero-dependency UI engineering. Custom 3D perspective projection and N-body spatial physics on raw HTML5 Canvas. Offline-first client architectures built without framework abstraction layers.</p>
-          <p class="competency-detail">Offline-first web architecture means the application writes every state mutation to local browser storage (Web Storage API or IndexedDB) before attempting any network call. The result is a system that remains fully operational during complete network isolation: data is never lost, reads hit local cache at microsecond latency, and synchronization happens opportunistically when connectivity resumes. This is not a progressive enhancement strategy; it is the foundational constraint from which the entire data flow is designed.</p>
+          <p class="competency-desc">Zero-dependency UI engineering. Custom 3D perspective projection and
+            <abbr class="term-def" title="N-body spatial physics: a simulation where N discrete particles each exert Coulomb-like repulsion forces on every other particle, computed in O(N^2) per frame, producing organic emergent dispersion patterns on the HTML5 Canvas without any physics library.">N-body spatial physics</abbr>
+            on raw HTML5 Canvas.
+            <abbr class="term-def" title="Offline-first architecture: a design constraint where all state mutations write to local browser storage (Web Storage API or IndexedDB) before any network call, keeping the application fully operational during complete network isolation.">Offline-first client architectures</abbr>
+            built without framework abstraction layers.
+          </p>
+          <p class="competency-detail">Offline-first means the application writes every state mutation to local browser storage before attempting any network call. The result is a system that remains fully operational during complete network isolation: data is never lost, reads hit local cache at microsecond latency, and synchronization happens opportunistically when connectivity resumes.</p>
           <div class="competency-stack">
             <span class="tag">HTML5</span>
             <span class="tag">CSS3</span>
@@ -253,7 +291,9 @@
           <span class="competency-index">DOMAIN_02</span>
           <h3 class="competency-title">Backend Telemetry</h3>
           <p class="competency-desc">REST API integration, structured data pipelines, and server-side request processing. Local persistence caching, relational query composition, and resilient state synchronization during network outages.</p>
-          <p class="competency-detail">When a backend API feed becomes unavailable, a correctly architected client does not fail. IndexedDB provides a structured, indexed key-value store that survives browser restarts and can hold tens of megabytes of normalized relational data client-side. Combined with deterministic cache invalidation strategies, this enables applications to serve accurate, queryable data under total network partition.</p>
+          <p class="competency-detail">When a backend API feed becomes unavailable, a correctly architected client does not fail.
+            <abbr class="term-def" title="IndexedDB: a low-level browser API providing a transactional, indexed key-value object store that persists across browser restarts, supports structured cloning of complex data types, and can store tens of megabytes of normalized data client-side.">IndexedDB</abbr>
+            provides a structured, indexed key-value store that survives browser restarts and can hold tens of megabytes of normalized relational data client-side. Combined with deterministic cache invalidation strategies, this enables applications to serve accurate, queryable data under total network partition.</p>
           <div class="competency-stack">
             <span class="tag">PYTHON</span>
             <span class="tag">SQL</span>
@@ -267,8 +307,13 @@
         <div class="scatter-item competency-card card-interactive">
           <span class="competency-index">DOMAIN_03</span>
           <h3 class="competency-title">Systems-Level C++</h3>
-          <p class="competency-desc">Machine learning inference engines compiled without external dependencies. 64-byte CPU cache line boundary alignment, compile-time polymorphism via C++17 templates, and zero virtual-dispatch hot paths.</p>
-          <p class="competency-detail">C++ inference engines outperform Python-based ML runtimes on constrained hardware for two measurable reasons. First, memory buffers aligned to 64-byte boundaries (matching x86_64 and ARM cache lines) eliminate false sharing and cache-line splits during GEMM sweeps, reducing memory-wall stalls that dominate matrix multiply throughput. Second, C++17 template metaprogramming resolves polymorphic dispatch at compile time; there are no vtable pointer dereferences in the hot path. The combined result is deterministic, low-latency inference on microcontrollers that cannot provision a Python interpreter.</p>
+          <p class="competency-desc">
+            <abbr class="term-def" title="C++ inference engine: a neural network forward-pass runtime compiled from C++ source to a dependency-free static binary, running matrix multiply (GEMM), activation functions (ReLU), and softmax normalization without a Python interpreter or GPU toolkit, deployable on bare-metal embedded CPUs.">Machine learning inference engines</abbr>
+            compiled without external dependencies. 64-byte CPU
+            <abbr class="term-def" title="Cache line boundary alignment: structuring memory buffers so each matrix row starts at a 64-byte offset matching the x86_64 and ARM L1/L2 cache line width, preventing false sharing between cores and eliminating split-cache-line reads that stall the memory bus during GEMM sweeps.">cache line boundary alignment</abbr>,
+            compile-time polymorphism via C++17 templates, and zero virtual-dispatch hot paths.
+          </p>
+          <p class="competency-detail">C++ inference engines outperform Python-based ML runtimes on constrained hardware for two measurable reasons: 64-byte aligned matrix buffers eliminate false sharing and cache-line splits during GEMM sweeps; and C++17 template metaprogramming resolves polymorphic dispatch at compile time with no vtable dereferences in the hot path. The result is deterministic, low-latency inference on microcontrollers that cannot provision a Python interpreter.</p>
           <div class="competency-stack">
             <span class="tag">C++17</span>
             <span class="tag">C</span>
@@ -313,31 +358,31 @@
         <details class="faq-item scatter-item">
           <summary class="faq-question">What is offline-first web architecture?</summary>
           <div class="faq-answer">
-            <p>Offline-first web architecture is a design constraint in which all critical application state mutations are written to local browser persistence (Web Storage API or IndexedDB) before any network transmission attempt is made. The application remains fully operational without any internet connection; network synchronization is an optional enhancement rather than a prerequisite for core functionality.</p>
-            <p>This pattern eliminates data loss during connectivity failures, ensures deterministic behavior in remote or infrastructure-poor environments, and removes server round-trips from the critical read path, reducing perceived read latency to near zero once the cache is populated. Projects including <strong>BuildLedger Pro</strong> (construction payroll in zero-reception sites) and the <strong>Smart Kanji Analyzer</strong> (offline linguistic parsing) are built on this principle.</p>
+            <p>Offline-first web architecture writes all application state mutations to local browser storage (Web Storage API or IndexedDB) before any network call. The app runs fully without an internet connection; network sync is optional, not required.</p>
+            <p>This eliminates data loss on connectivity failure, ensures deterministic behavior in remote environments, and reduces read latency to near zero once the cache is populated. Projects including <strong>BuildLedger Pro</strong> (construction payroll in zero-reception sites) and the <strong>Smart Kanji Analyzer</strong> (offline Japanese linguistic parsing) are built on this constraint.</p>
           </div>
         </details>
 
         <details class="faq-item scatter-item">
           <summary class="faq-question">What are the performance advantages of a dependency-free C++ inference engine over Python-based ML frameworks?</summary>
           <div class="faq-answer">
-            <p>Python-based ML frameworks (PyTorch, TensorFlow, ONNX Runtime) require a CPython interpreter, CUDA toolkit, and shared libraries totalling several gigabytes that cannot be provisioned on edge microcontrollers or embedded CPUs with kilobytes of available memory. A dependency-free C++ inference engine compiled to a single static binary eliminates this requirement.</p>
-            <p>Specific performance advantages in the <strong>InferC</strong> engine include: (1) 64-byte cache line boundary alignment on matrix buffers, eliminating false sharing and cache-line splits during GEMM sweeps; (2) C++17 template metaprogramming resolving all polymorphic dispatch at compile time with no vtable pointer indirection in the hot path; (3) a zero-copy binary weight format avoiding deserialization overhead at model load; and (4) direct portability to any POSIX target without dependency resolution tooling.</p>
+            <p>Python ML frameworks (PyTorch, TensorFlow, ONNX Runtime) require gigabytes of runtime (CPython interpreter, CUDA toolkit, shared libraries) that cannot be provisioned on edge microcontrollers. A dependency-free C++ engine compiles to a single static binary and runs on any POSIX target.</p>
+            <p>Specific advantages in <strong>InferC</strong>: 64-byte cache line alignment eliminates false sharing during GEMM sweeps; C++17 template metaprogramming resolves all polymorphic dispatch at compile time with no vtable indirection; a zero-copy binary weight format skips deserialization at model load; and no dependency resolution tooling is required at deployment.</p>
           </div>
         </details>
 
         <details class="faq-item scatter-item">
           <summary class="faq-question">What was the core architectural problem Kissa Panjab solved?</summary>
           <div class="faq-answer">
-            <p>Kissa Panjab required delivering high-resolution archival imagery and editorial-dense page layouts at sub-second load times across network conditions ranging from metropolitan gigabit connections to constrained rural infrastructure in South Asia and diaspora communities globally.</p>
-            <p>The architectural solution was a fully static, zero-dependency frontend served from CDN edge nodes: no server-side rendering, no database round-trips, no JavaScript framework initialization cycle, and no hydration overhead. Layout is composed entirely in hand-authored CSS Grid. The critical rendering path is a single HTML document, one stylesheet, and one deferred script, keeping time-to-interactive below the threshold of perceptible delay on 3G connections.</p>
+            <p>Kissa Panjab needed sub-second delivery of high-resolution archival content across network conditions from metropolitan gigabit to constrained rural infrastructure in South Asia, without server-side rendering, database round-trips, or a JavaScript framework boot cycle.</p>
+            <p>The solution: a fully static, zero-dependency frontend served from CDN edge nodes. No SSR, no hydration, no client-side router. The critical rendering path is one HTML document, one stylesheet, and one deferred script.</p>
           </div>
         </details>
 
         <details class="faq-item scatter-item">
           <summary class="faq-question">What services are available for hire?</summary>
           <div class="faq-answer">
-            <p>Available engineering engagements include: offline-first and local-first web application development for environments with unreliable or absent network connectivity; custom frontend architecture using Vanilla JavaScript, HTML5 Canvas, and Web Storage APIs without framework dependencies; systems-level C++ development for ML inference engines, embedded deployment targets, and cache-optimized computation kernels; REST API integration and structured data pipeline construction; and custom brand platforms and digital archive systems. Direct inquiries: <a href="mailto:amanpreetsingh21605@gmail.com">amanpreetsingh21605@gmail.com</a></p>
+            <p>Available engagements: offline-first and local-first web application development; zero-dependency frontend architecture with Vanilla JavaScript and HTML5 Canvas; systems-level C++ for ML inference engines and embedded targets; REST API integration and data pipeline construction; custom brand platforms and digital archive systems. Contact: <a href="mailto:amanpreetsingh21605@gmail.com">amanpreetsingh21605@gmail.com</a></p>
           </div>
         </details>
 
