@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work Archive | Amanpreet Singh</title>
-  <meta name="description" content="Technical project archive for Amanpreet Singh. Smart Kanji Analyzer, InferC C++17 Inference Engine, BuildLedger Pro, and Japan Seismic & Weather Dashboard.">
+  <meta name="description" content="Technical project archive for Amanpreet Singh: InferC C++17 Inference Library, Nihongo Syntax Matrix, Smart Kanji Analyzer, Japan Seismic & Weather Dashboard, and BuildLedger Pro.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="icon.ico">
@@ -58,100 +58,28 @@
     <header class="page-header">
       <div class="page-header-inner">
         <h1 class="page-header-title">The Archive.</h1>
-        <p class="page-header-sub">Production and systems engineering projects. Each entry documents the mathematical foundations, architectural patterns, and execution constraints.</p>
+        <p class="page-header-sub">Public engineering projects by Amanpreet Singh, documented accurately against implemented source code, test suites, and runtime dependencies.</p>
       </div>
     </header>
 
-    <!-- PROJECT 01: SMART KANJI ANALYZER - Natural Language Systems Archive -->
-    <section class="section scatter-section" id="project-kanji">
-      <h2 class="section-heading">PROJECT 01 / NATURAL LANGUAGE SYSTEMS</h2>
+    <!-- PROJECT 01: INFERC - Systems Engineering ML Inference Archive -->
+    <section class="section scatter-section" id="project-inferc">
+      <h2 class="section-heading">PROJECT 01 / SYSTEMS ENGINEERING</h2>
 
       <div class="project-entry">
-        <!-- Project Title Header: Vector-scattered entrance block -->
         <div class="scatter-item project-header">
           <span class="project-index">01</span>
-          <h3 class="project-name">Smart Kanji Analyzer &amp; Nihongo Syntax Matrix</h3>
-        </div>
-
-        <p class="scatter-item project-subtitle">Offline-First Japanese Morphological &amp; Temporal Syntax Engine</p>
-
-        <!-- Project Narrative: Dedicated vertical reveal (scatter-text) with single animation contract -->
-        <div class="project-body scatter-text">
-          <p>A full-stack linguistic platform engineered with vanilla JavaScript for analyzing Japanese temporal syntax and semantic structures. The parsing pipeline tokenizes unstructured text via Kuromoji.js (utilizing the complete IPA dictionary compiled into binary format), resolves kanji stroke and radical metadata through kanjiapi.dev REST endpoints, and computes real-time phonetic transliteration into Hepburn romaji.</p>
-          <p>The temporal syntax parser decomposes complex Japanese verb conjugations, classifying grammatical time aspects (aspectual auxiliaries, past/non-past markers, and relative temporal clauses). All dictionary lookups and API responses are committed to a deterministic Web Storage API cache layer, allowing the engine to execute completely offline after first-time dictionary hydration.</p>
-          <p>Eliminating framework abstraction layers guarantees sub-millisecond tokenization latency even across extensive paragraphs of authentic Japanese text.</p>
-        </div>
-
-        <!-- Technical Specification Matrix: Static grid wrapper; child cells scatter independently without nesting compound transforms -->
-        <div class="project-detail-grid">
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">MORPHOLOGICAL ENGINE</div>
-            <div class="detail-value">Kuromoji.js (Binary IPA Dictionary)</div>
-          </div>
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">KANJI DATA SOURCE</div>
-            <div class="detail-value">kanjiapi.dev REST API</div>
-          </div>
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">PERSISTENCE LAYER</div>
-            <div class="detail-value">Web Storage API (localStorage Cache)</div>
-          </div>
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">RUNTIME MODEL</div>
-            <div class="detail-value">Client-Side JavaScript (Zero Backend)</div>
-          </div>
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">PHONETICS</div>
-            <div class="detail-value">Hepburn Romaji Conversion Matrix</div>
-          </div>
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">ARCHITECTURE</div>
-            <div class="detail-value">Offline-First, Zero Framework Runtime</div>
-          </div>
-        </div>
-
-        <div class="scatter-item project-tags">
-          <span class="tag tag-accent">VANILLA JS</span>
-          <span class="tag">KUROMOJI.JS</span>
-          <span class="tag">KANJIAPI.DEV</span>
-          <span class="tag">WEB STORAGE API</span>
-          <span class="tag">OFFLINE-FIRST</span>
-          <span class="tag">HEPBURN ROMAJI</span>
-          <span class="tag">NLP</span>
-        </div>
-
-        <div class="scatter-item project-actions" style="display: flex; gap: 8px; margin-top: 1.25rem; flex-wrap: wrap;">
-          <a href="https://smart-kanji-analyzer.vercel.app" class="featured-link" target="_blank" rel="noopener noreferrer">SMART KANJI LIVE &rarr;</a>
-          <a href="https://nihongo-syntax-matrix.vercel.app" class="featured-link" target="_blank" rel="noopener noreferrer">SYNTAX MATRIX LIVE &rarr;</a>
-          <a href="https://github.com/Amanpreet6656/smart-kanji-analyzer" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">KANJI SOURCE &rarr;</a>
-          <a href="https://github.com/Amanpreet6656/Nihongo-syntax-matrix" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">SYNTAX SOURCE &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-full"></div>
-
-    <!-- PROJECT 02: INFERC - Systems Engineering ML Inference Archive -->
-    <section class="section scatter-section" id="project-inferc">
-      <h2 class="section-heading">PROJECT 02 / SYSTEMS ENGINEERING</h2>
-
-      <div class="project-entry">
-        <!-- Project Title Header: Vector-scattered entrance block -->
-        <div class="scatter-item project-header">
-          <span class="project-index">02</span>
           <h3 class="project-name">InferC</h3>
         </div>
 
-        <p class="scatter-item project-subtitle">C++17 Machine Learning Inference Engine for Edge Deployment</p>
+        <p class="scatter-item project-subtitle">Header-Only C++17 Feed-Forward Neural Network Inference Library</p>
 
-        <!-- Project Narrative: Dedicated vertical reveal (scatter-text) with single animation contract -->
         <div class="project-body scatter-text">
-          <p>A standalone, dependency-free neural network inference runtime engineered in ISO C++17. Designed specifically for deployment on edge and embedded microcontrollers where dynamic language runtimes, Python interpreters, and CUDA GPU toolchains cannot be provisioned.</p>
-          <p>Matrix transformation kernels are hand-crafted for high CPU cache locality. Contiguous memory buffers are strictly aligned to 64-byte boundaries (matching modern x86_64 and ARM L1/L2 cache lines) to prevent false sharing and minimize cache misses during intensive General Matrix Multiply (GEMM) sweeps. Compile-time template metaprogramming eliminates virtual dispatch overhead in the inner inference loops.</p>
-          <p>The forward computational pass supports fully connected dense layers, Rectified Linear Unit (ReLU) activations, and numerical softmax normalization. Model parameter weights are imported via a custom zero-copy binary serialization format.</p>
+          <p>A standalone, header-only neural network inference library written in ISO C++17 using only the C++ Standard Library (no BLAS, Eigen, or external tensor frameworks). Designed to study CPU cache locality, numerical stability, and safe binary model deserialization.</p>
+          <p><code>inferc::Tensor</code> manages contiguous row-major <code>std::vector&lt;float&gt;</code> storage with integer overflow checks on dimensions, strong exception guarantees during <code>resize</code> and <code>load_weights</code>, and runtime pointer identity checks around <code>__restrict__</code> qualifiers to keep in-place operations free of undefined behavior. Dense forward passes use an <code>i-k-j</code> loop interchange with 4-way K-unrolling and fused bias accumulation (<code>gemm_bias</code>), paired with branchless ReLU and overflow-guarded Softmax.</p>
+          <p>Weights are exported by a companion Python script into a validated little-endian binary format (<code>INFC</code> magic header, protocol version, endianness marker, dimension checks, and <code>std::isfinite</code> validation). Verified on GitHub Actions across both <code>g++</code> and <code>clang++</code> with AddressSanitizer and UndefinedBehaviorSanitizer.</p>
         </div>
 
-        <!-- Technical Specification Matrix: Static grid wrapper; child cells scatter independently without nesting compound transforms -->
         <div class="project-detail-grid">
           <div class="project-detail-cell card-interactive scatter-item">
             <div class="detail-label">LANGUAGE STANDARD</div>
@@ -159,33 +87,33 @@
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
             <div class="detail-label">DEPENDENCY GRAPH</div>
-            <div class="detail-value">Zero External Libraries (C++ Standard Library)</div>
+            <div class="detail-value">STL Only (Zero External C++ Libraries)</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">HARDWARE TARGET</div>
-            <div class="detail-value">Edge Microcontrollers &amp; Embedded CPUs</div>
+            <div class="detail-label">MEMORY MODEL</div>
+            <div class="detail-value">Contiguous Row-Major std::vector&lt;float&gt;</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">MEMORY STRATEGY</div>
-            <div class="detail-value">64-Byte Cache Line Boundary Alignment</div>
+            <div class="detail-label">KERNEL TOPOLOGY</div>
+            <div class="detail-value">i-k-j Loop Interchange + 4-Way Unroll</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">DISPATCH MODEL</div>
-            <div class="detail-value">Compile-Time Polymorphism (Templates)</div>
+            <div class="detail-label">SERIALIZATION</div>
+            <div class="detail-value">Validated INFC Little-Endian Binary</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">LAYER ARCHITECTURE</div>
-            <div class="detail-value">Dense GEMM, ReLU, Softmax</div>
+            <div class="detail-label">VERIFICATION</div>
+            <div class="detail-value">Tolerance Tests + ASan/UBSan CI</div>
           </div>
         </div>
 
         <div class="scatter-item project-tags">
           <span class="tag tag-accent">C++17</span>
-          <span class="tag">ZERO DEPENDENCIES</span>
+          <span class="tag">HEADER-ONLY</span>
           <span class="tag">CACHE LOCALITY</span>
-          <span class="tag">EDGE DEPLOYMENT</span>
-          <span class="tag">TEMPLATE METAPROGRAMMING</span>
-          <span class="tag">ML INFERENCE</span>
+          <span class="tag">GEMM KERNEL</span>
+          <span class="tag">RAII</span>
+          <span class="tag">GITHUB ACTIONS CI</span>
         </div>
 
         <div class="scatter-item project-actions" style="display: flex; gap: 8px; margin-top: 1.25rem; flex-wrap: wrap;">
@@ -196,133 +124,189 @@
 
     <div class="divider-full"></div>
 
-    <!-- PROJECT 03: BUILDLEDGER PRO - Local-First Construction Architecture Archive -->
-    <section class="section scatter-section" id="project-buildledger">
-      <h2 class="section-heading">PROJECT 03 / LOCAL-FIRST SOFTWARE</h2>
+    <!-- PROJECT 02: NIHONGO SYNTAX MATRIX & SMART KANJI ANALYZER -->
+    <section class="section scatter-section" id="project-kanji">
+      <h2 class="section-heading">PROJECT 02 / JAPANESE LANGUAGE TOOLS</h2>
 
       <div class="project-entry">
-        <!-- Project Title Header: Vector-scattered entrance block -->
         <div class="scatter-item project-header">
-          <span class="project-index">03</span>
-          <h3 class="project-name">BuildLedger Pro</h3>
+          <span class="project-index">02</span>
+          <h3 class="project-name">Nihongo Syntax Matrix &amp; Smart Kanji Analyzer</h3>
         </div>
 
-        <p class="scatter-item project-subtitle">Local-First Construction Payroll &amp; Attendance Manager</p>
+        <p class="scatter-item project-subtitle">Client-Side Japanese Verb Conjugation, Calendar Grammar &amp; Kanji Breakdown Tools</p>
 
-        <!-- Project Narrative: Dedicated vertical reveal (scatter-text) with single animation contract -->
         <div class="project-body scatter-text">
-          <p>A mission-critical payroll management tool engineered specifically for remote construction environments characterized by zero cellular reception. Built entirely with Vanilla JavaScript and the Web Storage API, eliminating cloud synchronization dependencies during critical daily operations.</p>
-          <p>The state management engine handles tradesperson rosters, hourly rate matrices, overtime brackets, and aggregate payroll reporting. Every state transition is written synchronously to local persistent storage, providing immediate crash resilience against battery depletion or browser termination.</p>
-          <p>The user interface eschews CSS component libraries in favor of sharp, high-contrast, touch-optimized layouts engineered for high visibility on ruggedized field tablets in direct sunlight.</p>
+          <p><strong>Nihongo Syntax Matrix</strong> is a deterministic, offline-capable Japanese grammar explorer implemented in Vanilla JavaScript (ES6+). It classifies verbs into Godan, Ichidan, Suru, and Kuru paradigms (including <em>godan</em> -iru/-eru exceptions, <em>keigo</em> stems, and <em>onbin</em> euphonic mutations), generates plain and polite conjugations with Hepburn romanization, and models irregular Japanese calendar readings alongside temporal particle rules (<code>に</code>, <code>から</code>, <code>まで</code>).</p>
+          <p><strong>Smart Kanji Analyzer</strong> isolates unique CJK ideographs from user-entered Japanese sentences via Unicode character-range evaluation (using spread-operator code-point iteration and <code>Set</code> deduplication), fetches readings, stroke counts, and JLPT levels from <code>kanjiapi.dev</code> with local caching and offline fallback entries, and builds interactive review flashcards via a pub-sub <code>AppState</code> store.</p>
+          <p>Both projects run directly in the browser without frontend UI frameworks or backend servers, and include automated Node.js verification tests covering conjugation rules and character extraction.</p>
         </div>
 
-        <!-- Technical Specification Matrix: Static grid wrapper; child cells scatter independently without nesting compound transforms -->
         <div class="project-detail-grid">
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">RUNTIME</div>
-            <div class="detail-value">Vanilla JavaScript ES6+</div>
+            <div class="detail-label">CONJUGATION ENGINE</div>
+            <div class="detail-value">Deterministic Rule Engine (Godan/Ichidan/Irregular)</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">PERSISTENCE</div>
-            <div class="detail-value">Web Storage API (localStorage)</div>
+            <div class="detail-label">KANJI EXTRACTION</div>
+            <div class="detail-value">Unicode Range Evaluation + Set Deduplication</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">NETWORK TOLERANCE</div>
-            <div class="detail-value">100% Offline-Operational</div>
+            <div class="detail-label">KANJI DATA SOURCE</div>
+            <div class="detail-value">kanjiapi.dev REST API + Local Fallback</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">UI ARCHITECTURE</div>
-            <div class="detail-value">Hand-Crafted High-Contrast CSS</div>
+            <div class="detail-label">STATE &amp; PERSISTENCE</div>
+            <div class="detail-value">Pub-Sub Store &amp; localStorage Preferences</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">DATA PORTABILITY</div>
-            <div class="detail-value">Standard RFC 4180 CSV Export</div>
+            <div class="detail-label">PHONETICS</div>
+            <div class="detail-value">Rule-Based Hepburn Romaji Transliteration</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">TARGET HARDWARE</div>
-            <div class="detail-value">Ruggedized Site Tablets</div>
+            <div class="detail-label">RUNTIME MODEL</div>
+            <div class="detail-value">Client-Side Vanilla JS (Zero Backend)</div>
           </div>
         </div>
 
         <div class="scatter-item project-tags">
           <span class="tag tag-accent">VANILLA JS</span>
-          <span class="tag">WEB STORAGE API</span>
-          <span class="tag">OFFLINE-FIRST</span>
-          <span class="tag">LOCAL-FIRST</span>
-          <span class="tag">CONSTRUCTION TECH</span>
-          <span class="tag">CSV EXPORT</span>
+          <span class="tag">UNICODE EVALUATION</span>
+          <span class="tag">KANJIAPI.DEV</span>
+          <span class="tag">LOCALSTORAGE</span>
+          <span class="tag">HEPBURN ROMAJI</span>
+          <span class="tag">JAPANESE GRAMMAR</span>
         </div>
 
         <div class="scatter-item project-actions" style="display: flex; gap: 8px; margin-top: 1.25rem; flex-wrap: wrap;">
-          <a href="https://amanpreet6656.github.io/BuildLedger-Pro/" class="featured-link" target="_blank" rel="noopener noreferrer">LIVE APPLICATION &rarr;</a>
-          <a href="https://github.com/Amanpreet6656/BuildLedger-Pro" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">SOURCE CODE &rarr;</a>
+          <a href="https://nihongo-syntax-matrix.vercel.app" class="featured-link" target="_blank" rel="noopener noreferrer">SYNTAX MATRIX LIVE &rarr;</a>
+          <a href="https://smart-kanji-analyzer.vercel.app" class="featured-link" target="_blank" rel="noopener noreferrer">SMART KANJI LIVE &rarr;</a>
+          <a href="https://github.com/Amanpreet6656/Nihongo-syntax-matrix" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">SYNTAX SOURCE &rarr;</a>
+          <a href="https://github.com/Amanpreet6656/smart-kanji-analyzer" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">KANJI SOURCE &rarr;</a>
         </div>
       </div>
     </section>
 
     <div class="divider-full"></div>
 
-    <!-- PROJECT 04: JAPAN SEISMIC DASHBOARD - Geophysical Telemetry Archive -->
+    <!-- PROJECT 03: JAPAN SEISMIC DASHBOARD -->
     <section class="section scatter-section" id="project-seismic">
-      <h2 class="section-heading">PROJECT 04 / GEOPHYSICAL TELEMETRY</h2>
+      <h2 class="section-heading">PROJECT 03 / GEOPHYSICAL TELEMETRY</h2>
 
       <div class="project-entry">
-        <!-- Project Title Header: Vector-scattered entrance block -->
         <div class="scatter-item project-header">
-          <span class="project-index">04</span>
+          <span class="project-index">03</span>
           <h3 class="project-name">Japan Seismic &amp; Weather Dashboard</h3>
         </div>
 
-        <p class="scatter-item project-subtitle">Offline-First Telemetry Application Combining JMA Seismic Data &amp; Open-Meteo APIs</p>
+        <p class="scatter-item project-subtitle">Client-Side Seismic, Meteorological &amp; Preparedness Dashboard for Japan</p>
 
-        <!-- Project Narrative: Dedicated vertical reveal (scatter-text) with single animation contract -->
         <div class="project-body scatter-text">
-          <p>A high-frequency geophysical telemetry web application tracking real-time seismic events and atmospheric parameters across the Japanese archipelago. The system combines open seismic data feeds from the Japan Meteorological Agency (JMA) with atmospheric forecasts from the Open-Meteo REST API.</p>
-          <p>Engineered for critical situational awareness during infrastructure disruptions, the application implements an offline-first caching pipeline. All fetched seismic intensity matrices (measuring Japanese seismic intensity <em>shindo</em> scales 1 through 7) and weather parameters are cached locally via the Web Storage API and IndexedDB. Even when telecommunication towers fail, the application continues to display cached seismic fault lines, localized warning thresholds, and recent historical seismicity.</p>
-          <p>Spatial cartography is rendered via native SVG coordinates and HTML5 canvas projections without external map tile dependencies (such as Mapbox or Google Maps), reducing initial network payload by over 90% and running at 60 FPS on low-power devices.</p>
+          <p>A client-side monitoring dashboard built with HTML5, CSS3, Vanilla JavaScript, and Leaflet 1.9.4. The platform aggregates real-time USGS earthquake GeoJSON feeds, Open-Meteo meteorological forecasts (targeting the <code>jma_seamless</code> model), Wolfx JMA Earthquake Early Warning WebSocket/HTTP streams, and OpenStreetMap Nominatim geocoding.</p>
+          <p>For each USGS earthquake event, the application computes estimated JMA instrumental Shindo intensity using the Midorikawa et al. (1999) attenuation relationship alongside approximate P-wave and S-wave transit times. Weather telemetry evaluates heatstroke risk using the Ministry of the Environment simplified WBGT formula.</p>
+          <p>Interactive cartography runs through Leaflet using Esri ArcGIS World Dark Gray raster tiles (with OpenStreetMap tile fallback) and polyline overlays for major subduction zones. Watchlist locations and Tokyo BCP 72-hour preparedness checklist states persist in browser <code>localStorage</code>.</p>
         </div>
 
-        <!-- Technical Specification Matrix: Static grid wrapper; child cells scatter independently without nesting compound transforms -->
         <div class="project-detail-grid">
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">SEISMIC SOURCE</div>
-            <div class="detail-value">JMA Seismic Event Feed (Shindo Scale 1-7)</div>
+            <div class="detail-label">SEISMIC SOURCES</div>
+            <div class="detail-value">USGS GeoJSON + Wolfx JMA EEW Mirror</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
             <div class="detail-label">METEOROLOGICAL DATA</div>
-            <div class="detail-value">Open-Meteo High-Resolution REST API</div>
-          </div>
-          <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">OFFLINE STRATEGY</div>
-            <div class="detail-value">IndexedDB &amp; Web Storage API Cache Pipeline</div>
+            <div class="detail-value">Open-Meteo REST API (jma_seamless)</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
             <div class="detail-label">CARTOGRAPHY ENGINE</div>
-            <div class="detail-value">Native SVG Coordinate Mapping &amp; HTML5 Canvas</div>
+            <div class="detail-value">Leaflet 1.9.4 (ArcGIS / OSM Tiles)</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">DATA CONSUMPTION</div>
-            <div class="detail-value">Optimized JSON Stream Parsing</div>
+            <div class="detail-label">GEOPHYSICAL MODELS</div>
+            <div class="detail-value">Midorikawa (1999) Shindo &amp; MOE WBGT</div>
           </div>
           <div class="project-detail-cell card-interactive scatter-item">
-            <div class="detail-label">DEPLOYMENT SCOPE</div>
-            <div class="detail-value">Emergency Offline Situational Awareness</div>
+            <div class="detail-label">PERSISTENCE LAYER</div>
+            <div class="detail-value">Web Storage API (localStorage)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">CHARTS &amp; VISUALS</div>
+            <div class="detail-value">Inline SVG Climate Charts &amp; Canvas Demo</div>
           </div>
         </div>
 
         <div class="scatter-item project-tags">
-          <span class="tag tag-accent">OFFLINE-FIRST</span>
-          <span class="tag">JMA SEISMIC DATA</span>
+          <span class="tag tag-accent">VANILLA JS</span>
+          <span class="tag">LEAFLET GIS</span>
+          <span class="tag">USGS API</span>
           <span class="tag">OPEN-METEO API</span>
-          <span class="tag">INDEXEDDB</span>
-          <span class="tag">SVG CARTOGRAPHY</span>
+          <span class="tag">LOCALSTORAGE</span>
           <span class="tag">JAPAN TELEMETRY</span>
-          <span class="tag">VANILLA JS</span>
         </div>
 
         <div class="scatter-item project-actions" style="display: flex; gap: 8px; margin-top: 1.25rem; flex-wrap: wrap;">
           <a href="https://amanpreet6656.github.io/Japan-seismic-weather-dashboard/" class="featured-link" target="_blank" rel="noopener noreferrer">LIVE DASHBOARD &rarr;</a>
           <a href="https://github.com/Amanpreet6656/Japan-seismic-weather-dashboard" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">SOURCE CODE &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-full"></div>
+
+    <!-- PROJECT 04: BUILDLEDGER PRO -->
+    <section class="section scatter-section" id="project-buildledger">
+      <h2 class="section-heading">PROJECT 04 / LOCAL-FIRST UTILITY</h2>
+
+      <div class="project-entry">
+        <div class="scatter-item project-header">
+          <span class="project-index">04</span>
+          <h3 class="project-name">BuildLedger Pro</h3>
+        </div>
+
+        <p class="scatter-item project-subtitle">Bilingual Offline-Capable Construction Payroll &amp; Attendance Tracker</p>
+
+        <div class="project-body scatter-text">
+          <p>A client-side payroll and attendance tracking web tool built for construction supervisors working in low-connectivity field environments. Built as a standalone HTML5 application styled with Tailwind CSS (via CDN) and FontAwesome icons, driven by Vanilla ES6+ JavaScript.</p>
+          <p>All worker profiles, daily attendance states (full day 1.0, half day 0.5, absent 0.0), and cash advance deductions are persisted synchronously in browser <code>localStorage</code>. Includes dynamic English/Hindi localization, dark/light theme toggling, and RFC 4180 CSV payroll export.</p>
+        </div>
+
+        <div class="project-detail-grid">
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">RUNTIME</div>
+            <div class="detail-value">Vanilla JavaScript ES6+ (Single-File HTML)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">UI STYLING</div>
+            <div class="detail-value">Tailwind CSS (CDN) &amp; FontAwesome</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">PERSISTENCE</div>
+            <div class="detail-value">Web Storage API (localStorage)</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">LOCALIZATION</div>
+            <div class="detail-value">Bilingual English / Hindi Toggle</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">DATA EXPORT</div>
+            <div class="detail-value">Quoted RFC 4180 CSV Download</div>
+          </div>
+          <div class="project-detail-cell card-interactive scatter-item">
+            <div class="detail-label">NETWORK TOLERANCE</div>
+            <div class="detail-value">Offline State Persistence</div>
+          </div>
+        </div>
+
+        <div class="scatter-item project-tags">
+          <span class="tag tag-accent">VANILLA JS</span>
+          <span class="tag">TAILWIND CSS</span>
+          <span class="tag">LOCALSTORAGE</span>
+          <span class="tag">BILINGUAL UI</span>
+          <span class="tag">CSV EXPORT</span>
+        </div>
+
+        <div class="scatter-item project-actions" style="display: flex; gap: 8px; margin-top: 1.25rem; flex-wrap: wrap;">
+          <a href="https://amanpreet6656.github.io/BuildLedger-Pro/" class="featured-link" target="_blank" rel="noopener noreferrer">LIVE APPLICATION &rarr;</a>
+          <a href="https://github.com/Amanpreet6656/BuildLedger-Pro" class="featured-link" style="background: transparent;" target="_blank" rel="noopener noreferrer">SOURCE CODE &rarr;</a>
         </div>
       </div>
     </section>
@@ -336,7 +320,7 @@
         <span class="footer-year">2026</span>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/amanpreet6656" class="footer-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://github.com/Amanpreet6656" class="footer-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
         <a href="contact.html" class="footer-link">CONTACT</a>
         <a href="privacy.html" class="footer-link">PRIVACY</a>
         <a href="terms.html" class="footer-link">TERMS</a>

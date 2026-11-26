@@ -1,21 +1,25 @@
-# Amanpreet Singh - Full-Stack Software Engineer
+# Amanpreet Singh - Software Developer
 
-Amanpreet Singh is a Full-Stack Software Engineer specializing in offline-first web architecture, dependency-free C++ machine learning inference engines, and custom client-side platforms. His engineering work targets environments where network connectivity and heavy runtime dependencies cannot be assumed: remote industrial sites, embedded edge hardware, and culturally underserved infrastructure regions.
+Amanpreet Singh is a software developer based in Sirsa, Haryana, India, and a prospective applicant to the University of Aizu (ICT Global All-English Program). His public work focuses on dependency-free C++17 systems programming and offline-capable Vanilla JavaScript applications.
 
-Core technical specializations: Vanilla JavaScript (ES6+) against native Web APIs without framework abstraction layers; C++17 systems-level development with 64-byte cache line boundary alignment, compile-time template metaprogramming, and zero virtual-dispatch hot paths; HTML5 Canvas 2D for custom spatial mathematics and physics simulation; Web Storage API and IndexedDB for local-first data persistence; REST API integration and structured data pipeline construction; and responsive editorial-grade CSS architecture without utility library dependencies.
-
-Active commercial and open projects include Kissa Panjab (lead frontend developer for a Punjabi cultural digital archive), InferC (a dependency-free C++17 ML inference engine for edge microcontrollers), BuildLedger Pro (a local-first construction payroll manager for zero-connectivity field environments), the Smart Kanji Analyzer (an offline Japanese morphological and temporal syntax engine), and the Japan Seismic and Weather Dashboard (an offline-first geophysical telemetry application using JMA and Open-Meteo data feeds with native SVG cartography).
-
-Active research vectors include WebAssembly compilation of C++ ML kernels via the Emscripten toolchain, and analysis of real-time GPU rendering pipelines (Nanite virtualized microgeometry, Lumen indirect illumination) within Unreal Engine 5 in relation to custom software rasterization work.
+Verified technical capabilities across public repositories:
+- C++17 (ISO/IEC 14882:2017): header-only feed-forward neural inference kernels (`Infer-C`), row-major `std::vector<float>` tensor storage, `i-k-j` loop interchange with 4-way K-unrolling, runtime aliasing checks, binary weight validation, numerical tolerance tests, and GitHub Actions ASan/UBSan CI.
+- Client Web Architecture: semantic HTML5, CSS3 (Grid, Flexbox, custom properties), Vanilla JavaScript ES6+, HTML5 Canvas 2D particle physics (Coulomb repulsion, Hooke's law springs, Euler-Cromer integration), Web Storage API (`localStorage`), and selective integration of GSAP, Anime.js, Leaflet, and Tailwind CSS where appropriate.
+- Public Projects:
+  - InferC (`https://github.com/Amanpreet6656/Infer-C`): Header-only C++17 neural network inference library.
+  - Nihongo Syntax Matrix (`https://github.com/Amanpreet6656/Nihongo-syntax-matrix`): Rule-based offline-capable Japanese verb conjugation and calendar grammar explorer.
+  - Smart Kanji Analyzer (`https://github.com/Amanpreet6656/smart-kanji-analyzer`): Client-side Unicode kanji extractor and JLPT study flashcard tool backed by `kanjiapi.dev`.
+  - Japan Seismic & Weather Dashboard (`https://github.com/Amanpreet6656/Japan-seismic-weather-dashboard`): Real-time USGS seismic, Open-Meteo `jma_seamless`, and Wolfx EEW dashboard using Leaflet mapping, Midorikawa (1999) Shindo estimation, and MOE WBGT calculation.
+  - BuildLedger Pro (`https://github.com/Amanpreet6656/BuildLedger-Pro`): Bilingual (English/Hindi) construction payroll and attendance tracker built with HTML5, Tailwind CSS, Vanilla JS, and `localStorage`.
 
 Contact: amanpreetsingh21605@gmail.com
-GitHub: https://github.com/amanpreet6656
+GitHub: https://github.com/Amanpreet6656
 
 ## Key Pages
 
 - [Portfolio Index](https://amanpreet-singh.vercel.app/): Technical overview, core competencies, and featured project summary.
-- [Work Archive](https://amanpreet-singh.vercel.app/work.html): Full project archive with technical specification matrices for each engineering project.
-- [System Capabilities](https://amanpreet-singh.vercel.app/system.html): Full technology stack, engineering methodology, and active research directions.
-- [Direct Comms / Contact](https://amanpreet-singh.vercel.app/contact.html): Direct email contact and communication parameters.
+- [Work Archive](https://amanpreet-singh.vercel.app/work.html): Public project archive with verified technical specifications.
+- [System Capabilities](https://amanpreet-singh.vercel.app/system.html): Verified stack, engineering methodology, and learning directions.
+- [Direct Comms / Contact](https://amanpreet-singh.vercel.app/contact.html): Direct email contact and operational parameters.
 - [Privacy Policy](https://amanpreet-singh.vercel.app/privacy.html): Data handling and zero-collection architecture declaration.
 - [Terms and Conditions](https://amanpreet-singh.vercel.app/terms.html): Intellectual property, inspection license, and usage terms.
